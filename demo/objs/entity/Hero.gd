@@ -22,10 +22,9 @@ func _ready():
 	builder.set_jump_save_timer(0)
 	
 	builder.set_stats(1.0)
-
+	
 	#set_entity(Entity.new())
 	set_entity(builder.get_entity())
-	
 	
 	var animator : SimpleSpriteAnimator = SimpleSpriteAnimator.new()
 	var input : HumanInput = HumanInput.new()
@@ -34,3 +33,4 @@ func _ready():
 	set_animator(animator)
 	set_input_component(input)
 	set_move_component(PlatformerMover3D.new())
+	set_behaivor(HeroBehaivor.new())

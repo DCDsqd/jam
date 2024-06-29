@@ -14,7 +14,7 @@ func _process(delta):
 	position.x -= speed
 
 
-func _body_entered(node : Node3D):
+func _body_entered(_node : Node3D):
 	var marker : Marker3D = $"../Marker3D"
 	var game : JumpMiniGame = $"../../../../.."
 	position = marker.position
@@ -22,7 +22,7 @@ func _body_entered(node : Node3D):
 	game.minus_hp()
 	
 
-func _area_entred(area : Area3D):
+func _area_entred(_area : Area3D):
 	var marker : Marker3D = $"../Marker3D"
 	var game : JumpMiniGame = $"../../../../.."
 	speed += 0.01

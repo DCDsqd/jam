@@ -9,7 +9,7 @@ void godot::TriggerNextRoom::_bind_methods()
 
 bool godot::TriggerNextRoom::_activate()
 {
-	EternityData::get_singleton()->get_controller()->save_point("auto");
+	//EternityData::get_singleton()->get_controller()->save_point("auto");
 	EternityData::get_singleton()->get_controller()->swap_scene(next_scene);
 
     return true;

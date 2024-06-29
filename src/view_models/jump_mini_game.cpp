@@ -49,6 +49,7 @@ void godot::JumpMiniGame::_close_window()
 
     if(player != nullptr && player->get_data() != nullptr){
         calculate_score();
+        player->emit_signal("on_buffs_change");
     }else{
         UtilityFunctions::print("JumpMiniGame: player or player data is null");
     }
