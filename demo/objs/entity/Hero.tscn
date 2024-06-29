@@ -19,13 +19,6 @@ model_path = NodePath("SpriteModel")
 player_path = NodePath("AudioStreamPlayer3D")
 script = ExtResource("1_p3ckj")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(0.666667, 0, 0, 0, 0.666667, 0, 0, 0, 0.666667, 0, 0, 0.133826)
-visible = false
-light_energy = 0.5
-omni_range = 2.06042
-omni_attenuation = 0.143588
-
 [node name="SpriteModel" type="SpriteModel" parent="."]
 sprite_path = NodePath("AnimatedSprite3D")
 

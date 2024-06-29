@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://nvdryef4x41u"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_xaogd"]
+albedo_color = Color(0.709804, 0.933333, 0.929412, 1)
+refraction_enabled = true
+refraction_scale = 1.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bom05"]
+
+[node name="Ceiling" type="MeshInstance3D"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("ORMMaterial3D_xaogd")
+mesh = SubResource("PlaneMesh_bom05")
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="."]

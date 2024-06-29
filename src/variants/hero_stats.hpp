@@ -8,6 +8,11 @@ namespace godot{
 class HeroStats{
 
 public:
+
+    static String cafe_order(){
+        return "cafe_order";
+    }
+
     static String chill(){
         return "stat_chill";
     }

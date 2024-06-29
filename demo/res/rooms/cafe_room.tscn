@@ -15,5 +15,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 [node name="WoodFloor4" parent="." instance=ExtResource("1_e680u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 
+[node name="WoodFloor6" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="WoodFloor7" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="WoodFloor8" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
 [node name="WoodFloor5" parent="." instance=ExtResource("1_e680u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="WoodFloor9" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="WoodFloor10" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="WoodFloor11" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="WoodFloor12" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="WoodFloor13" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="WoodFloor14" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="WoodFloor15" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -2)
+
+[node name="WoodFloor16" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)

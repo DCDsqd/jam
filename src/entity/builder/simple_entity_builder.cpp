@@ -98,6 +98,8 @@ void godot::SimpleEntityBuilder::set_stats(float chill)
         UtilityFunctions::print("SimpleEntityBuilder: data is null");
         return;
     }
+    get_data()->put_string(HeroStats::cafe_order(), "");
+
     get_data()->put_float(HeroStats::chill(), chill);
 }
 
