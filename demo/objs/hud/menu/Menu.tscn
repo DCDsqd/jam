@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck1i5y3byl6tx"]
+
+[ext_resource type="Texture2D" uid="uid://dfghfxigsi3hv" path="res://res/sprites/items/google_cactus.png" id="1_gcsj1"]
+
+[node name="Menu" type="SimpleGameMenu"]
+container_path = NodePath("Control")
+elements_path = Array[NodePath]([NodePath("Control/StatMenu")])
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StatMenu" type="StatMenu" parent="Control"]
+chill_path = NodePath("chill_stat")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+
+[node name="chill_stat" type="Label" parent="Control/StatMenu"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 159.0
+offset_right = 412.0
+offset_bottom = 239.0
+text = "asdfasdfa"
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 319.0
+offset_right = 469.0
+offset_bottom = 424.0
+texture = ExtResource("1_gcsj1")

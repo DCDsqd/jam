@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://b3l0dcmkamxef"]
+
+[ext_resource type="Environment" uid="uid://4xfll0fcwfc8" path="res://res/shaders/env/dino_env.tres" id="1_p00hh"]
+[ext_resource type="PackedScene" uid="uid://cgdydi7j08yo4" path="res://objs/entity/dino.tscn" id="2_1jge6"]
+[ext_resource type="Script" path="res://objs/mini_games/jump_game/google_cactus.gd" id="3_htkp0"]
+[ext_resource type="Texture2D" uid="uid://dfghfxigsi3hv" path="res://res/sprites/items/google_cactus.png" id="3_q7drj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_oh44d"]
+size = Vector3(15, 1, 2.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2yjoa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j4fqe"]
+size = Vector3(1, 1, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y573m"]
+size = Vector3(0.46669, 0.915955, 0.49353)
+
+[node name="JumpMiniGame" type="JumpMiniGame"]
+
+[node name="Control" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 81.0
+offset_right = 1747.0
+offset_bottom = 995.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1544, 914)
+render_target_update_mode = 4
+
+[node name="Node3D" type="Node3D" parent="Control/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -20)
+
+[node name="ECamera" type="Camera3D" parent="Control/SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.976042, 0.217581, 0, -0.217581, 0.976042, 0.01, 1.424, 1.137)
+environment = ExtResource("1_p00hh")
+fov = 78.2
+
+[node name="Dino" parent="Control/SubViewportContainer/SubViewport/Node3D" instance=ExtResource("2_1jge6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0544934, -0.234838, -1.51446)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Control/SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.259, -2)
+mesh = SubResource("BoxMesh_oh44d")
+skeleton = NodePath("StaticBody3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Control/SubViewportContainer/SubViewport/Node3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Control/SubViewportContainer/SubViewport/Node3D/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_2yjoa")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Control/SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(0.866025, 0.25, -0.433013, 0, 0.866025, 0.5, 0.5, -0.433013, 0.75, 0, 3, 2)
+shadow_enabled = true
+
+[node name="Area3D" type="Area3D" parent="Control/SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.69203, -0.396405, -1.77417)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Control/SubViewportContainer/SubViewport/Node3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90617, 0, -0.5)
+shape = SubResource("BoxShape3D_j4fqe")
+
+[node name="Marker3D" type="Marker3D" parent="Control/SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.60572, -0.358428, -1.59724)
+
+[node name="cactus" type="Area3D" parent="Control/SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.87233, -0.358428, -1.59724)
+script = ExtResource("3_htkp0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Control/SubViewportContainer/SubViewport/Node3D/cactus"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021, 0.066, 0)
+shape = SubResource("BoxShape3D_y573m")
+
+[node name="Sprite3D" type="Sprite3D" parent="Control/SubViewportContainer/SubViewport/Node3D/cactus"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_q7drj")

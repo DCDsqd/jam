@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://keb1j8m6r7qw"]
+
+[node name="ParamButtonImpl" type="ParamButton"]
+offset_right = 152.0
+offset_bottom = 53.0

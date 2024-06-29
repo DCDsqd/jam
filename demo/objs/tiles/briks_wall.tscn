@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpw6hgkw7n5n7"]
+
+[ext_resource type="Material" uid="uid://dd1ufmjlilyfh" path="res://res/materials/briks/briks.tres" id="1_0clhi"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_12d6g"]
+size = Vector2(2, 2)
+
+[node name="BriksWall" type="MeshInstance3D"]
+material_override = ExtResource("1_0clhi")
+mesh = SubResource("QuadMesh_12d6g")

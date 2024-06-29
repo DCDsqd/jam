@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://vxrqdaslxtxp"]
+
+[ext_resource type="Script" path="res://objs/entity/apps_door.gd" id="1_iyk8a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ii2a"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jv4wi"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_810xq"]
+height = 0.92976
+radius = 1.0
+
+[node name="AppsDoor" type="ModelEntity"]
+interact_path = NodePath("Area3D")
+script = ExtResource("1_iyk8a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0ii2a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_jv4wi")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_810xq")

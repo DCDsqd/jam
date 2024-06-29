@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://da7w3crl4wv6t"]
+
+[ext_resource type="Texture2D" uid="uid://bp8mkaq7p86b8" path="res://res/materials/appsfloor/appsfloor.png" id="1_d28dc"]
+[ext_resource type="Texture2D" uid="uid://dis8luxn3w2rs" path="res://res/materials/appsfloor/appsfloor_p.png" id="2_u8aex"]
+[ext_resource type="Texture2D" uid="uid://cfn6ejrxpu7yf" path="res://res/materials/appsfloor/appsfloor_n.png" id="3_ohvyc"]
+[ext_resource type="Texture2D" uid="uid://bubkik75kl4vw" path="res://res/materials/appsfloor/appsfloor_s.png" id="3_ydin2"]
+
+[resource]
+albedo_texture = ExtResource("1_d28dc")
+metallic = 1.0
+metallic_texture = ExtResource("3_ydin2")
+normal_enabled = true
+normal_texture = ExtResource("3_ohvyc")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_texture = ExtResource("2_u8aex")
+uv1_triplanar = true
+texture_filter = 0

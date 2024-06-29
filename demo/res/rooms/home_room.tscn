@@ -1,0 +1,137 @@
+[gd_scene load_steps=4 format=3 uid="uid://mv5fanqvet3w"]
+
+[ext_resource type="PackedScene" uid="uid://dvrk3n8arnhni" path="res://objs/tiles/wood_floor.tscn" id="1_moso4"]
+[ext_resource type="PackedScene" uid="uid://c0ia2n1vx22lf" path="res://objs/tiles/single_wall.tscn" id="2_ltmog"]
+[ext_resource type="PackedScene" uid="uid://dpw6hgkw7n5n7" path="res://objs/tiles/briks_wall.tscn" id="3_vtubx"]
+
+[node name="Home" type="Node3D"]
+
+[node name="WoodFloor" parent="." instance=ExtResource("1_moso4")]
+
+[node name="WoodFloor4" parent="." instance=ExtResource("1_moso4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="WoodFloor5" parent="." instance=ExtResource("1_moso4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="WoodFloor2" parent="." instance=ExtResource("1_moso4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="WoodFloor3" parent="." instance=ExtResource("1_moso4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="WoodFloor6" parent="." instance=ExtResource("1_moso4")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 2, 0)
+
+[node name="WoodFloor7" parent="." instance=ExtResource("1_moso4")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 4, 2, 0)
+
+[node name="WoodFloor8" parent="." instance=ExtResource("1_moso4")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -4, 2, 0)
+
+[node name="WoodFloor9" parent="." instance=ExtResource("1_moso4")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 2, 2, 0)
+
+[node name="WoodFloor10" parent="." instance=ExtResource("1_moso4")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -2, 2, 0)
+
+[node name="SingleWall" parent="." instance=ExtResource("2_ltmog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -1)
+
+[node name="SingleWall11" parent="." instance=ExtResource("2_ltmog")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 1, 0)
+
+[node name="SingleWall2" parent="." instance=ExtResource("2_ltmog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1)
+
+[node name="SingleWall3" parent="." instance=ExtResource("2_ltmog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="SingleWall4" parent="." instance=ExtResource("2_ltmog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1)
+
+[node name="SingleWall5" parent="." instance=ExtResource("2_ltmog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -1)
+
+[node name="SingleWall12" parent="." instance=ExtResource("2_ltmog")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 1, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.67749, 1.80152, 0.598302)
+omni_attenuation = 0.307786
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32251, 1.80152, 0.598302)
+omni_attenuation = 0.307786
+
+[node name="BriksWall" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, 1)
+
+[node name="BriksWall2" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 1)
+
+[node name="BriksWall3" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
+
+[node name="BriksWall4" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, 1)
+
+[node name="BriksWall5" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 1)
+
+[node name="BriksWall6" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, 1)
+
+[node name="BriksWall21" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1, 1)
+
+[node name="BriksWall22" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 1)
+
+[node name="BriksWall23" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, 1)
+
+[node name="BriksWall24" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, 1)
+
+[node name="BriksWall7" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, 1)
+
+[node name="BriksWall8" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 1)
+
+[node name="BriksWall9" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 1)
+
+[node name="BriksWall10" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 1)
+
+[node name="BriksWall11" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 1)
+
+[node name="BriksWall12" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, 1)
+
+[node name="BriksWall19" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 1)
+
+[node name="BriksWall20" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, 1)
+
+[node name="BriksWall13" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 5, 1)
+
+[node name="BriksWall14" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5, 1)
+
+[node name="BriksWall15" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 1)
+
+[node name="BriksWall16" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, 1)
+
+[node name="BriksWall17" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 5, 1)
+
+[node name="BriksWall18" parent="." instance=ExtResource("3_vtubx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5, 1)

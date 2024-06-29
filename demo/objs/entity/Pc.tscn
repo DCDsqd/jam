@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b46i5i25441hj"]
+
+[ext_resource type="Script" path="res://objs/entity/Pc.gd" id="1_7pkm8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ak526"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u2mxw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ckauf"]
+radius = 1.0
+
+[node name="Pc" type="ModelEntity"]
+interact_path = NodePath("Area3D")
+script = ExtResource("1_7pkm8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ak526")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_u2mxw")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_ckauf")

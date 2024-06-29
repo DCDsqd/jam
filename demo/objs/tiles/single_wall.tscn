@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0ia2n1vx22lf"]
+
+[ext_resource type="Material" uid="uid://dgs3ryud5a8xw" path="res://res/materials/appswall/apps_wall.tres" id="1_k6e4c"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ki5ip"]
+size = Vector2(2, 2)
+
+[node name="SingleWall" type="MeshInstance3D"]
+material_override = ExtResource("1_k6e4c")
+mesh = SubResource("QuadMesh_ki5ip")

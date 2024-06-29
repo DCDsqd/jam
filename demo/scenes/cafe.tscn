@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyafqn7h0fqva"]
+
+[ext_resource type="PackedScene" uid="uid://bcmpqyfcok40g" path="res://res/rooms/cafe_room.tscn" id="1_4ef60"]
+[ext_resource type="PackedScene" uid="uid://ch7t0mltj8jjw" path="res://util/activator.tscn" id="1_cuk6y"]
+[ext_resource type="PackedScene" uid="uid://cpal2j5bw454l" path="res://objs/entity/Hero.tscn" id="2_onwa2"]
+[ext_resource type="PackedScene" uid="uid://ck1i5y3byl6tx" path="res://objs/hud/menu/Menu.tscn" id="3_l4xth"]
+[ext_resource type="PackedScene" uid="uid://b46i5i25441hj" path="res://objs/entity/Pc.tscn" id="4_6yntf"]
+
+[node name="Cafe" type="SingleHeroScene"]
+hero_key = "hero"
+hero_path = NodePath("Hero")
+triggers_container_path = NodePath("triggers")
+
+[node name="triggers" type="Node" parent="."]
+
+[node name="TriggerNextRoom" type="TriggerNextRoom" parent="triggers"]
+next_scene = "res://scenes/home.tscn"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="activator" parent="triggers/TriggerNextRoom" instance=ExtResource("1_cuk6y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.450563, 0.486391, 0)
+
+[node name="CafeScene" parent="." instance=ExtResource("1_4ef60")]
+
+[node name="Hero" parent="." groups=["for_save"] instance=ExtResource("2_onwa2")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.70388, 0.534223, 0)
+
+[node name="ECamera" type="ECamera" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64195, 1.11256, 3)
+target_path = NodePath("../Hero")
+speed_scale = 0.5
+outside_delta = Vector3(0, -1.5, -3)
+
+[node name="Menu" parent="." instance=ExtResource("3_l4xth")]
+
+[node name="Pc" parent="." instance=ExtResource("4_6yntf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09498, 0.000363998, 0.0229447)
+
+[node name="Hud" type="Hud" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

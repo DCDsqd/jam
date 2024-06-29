@@ -1,0 +1,82 @@
+#include "register_types.h"
+
+#include "test_dir/gdexample.h"
+
+#include "entity/builder/simple_entity_builder.h"
+#include "entity/inputer/human_input.h"
+
+#include "entity/mover/platformer_mover_3d.h"
+#include "entity/mover/dino_mover.h"
+
+#include "entity/animator/simple_sprite_animator.h"
+
+#include "entity/interactor/view_model_interactor.h"
+#include "entity/interactor/activate_trigger_interactor.h"
+
+#include "menu/stat_menu.h"
+#include "menu/simple_game_menu.h"
+
+#include "view_models/simple_view_model.h"
+#include "view_models/jump_mini_game.h"
+#include "view_models/multi_selector_model.h"
+
+#include "triggers/trigger_next_room.h"
+
+
+#include "util/param_button.h"
+
+
+#include <gdextension_interface.h>
+#include <godot_cpp/core/defs.hpp>
+#include <godot_cpp/godot.hpp>
+
+using namespace godot;
+
+void initialize_example_module(ModuleInitializationLevel p_level) {
+	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
+		return;
+	}
+
+	ClassDB::register_class<SimpleEntityBuilder>();
+	ClassDB::register_class<SimpleSpriteAnimator>();
+	ClassDB::register_class<HumanInput>();
+	ClassDB::register_class<PlatformerMover3D>();
+	ClassDB::register_class<SimpleViewModel>();
+	ClassDB::register_class<ViewModelInteractor>();
+	ClassDB::register_class<ActivateTriggerInteractor>();
+	ClassDB::register_class<DinoMover>();
+
+	ClassDB::register_class<SimpleGameMenu>();
+	ClassDB::register_class<StatMenu>();
+
+	ClassDB::register_class<TriggerNextRoom>();
+
+	ClassDB::register_class<MultiSelectorModel>();
+	ClassDB::register_class<JumpMiniGame>();
+
+
+	ClassDB::register_class<ParamButton>();
+
+
+	
+	ClassDB::register_class<GDExample>();
+}
+
+void uninitialize_example_module(ModuleInitializationLevel p_level) {
+	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
+		return;
+	}
+}
+
+extern "C" {
+// Initialization.
+GDExtensionBool GDE_EXPORT example_library_init(GDExtensionInterfaceGetProcAddress p_get_proc_address, const GDExtensionClassLibraryPtr p_library, GDExtensionInitialization *r_initialization) {
+	godot::GDExtensionBinding::InitObject init_obj(p_get_proc_address, p_library, r_initialization);
+
+	init_obj.register_initializer(initialize_example_module);
+	init_obj.register_terminator(uninitialize_example_module);
+	init_obj.set_minimum_library_initialization_level(MODULE_INITIALIZATION_LEVEL_SCENE);
+
+	return init_obj.init();
+}
+}

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcmpqyfcok40g"]
+
+[ext_resource type="PackedScene" uid="uid://dvrk3n8arnhni" path="res://objs/tiles/wood_floor.tscn" id="1_e680u"]
+
+[node name="CafeScene" type="Node3D"]
+
+[node name="WoodFloor" parent="." instance=ExtResource("1_e680u")]
+
+[node name="WoodFloor2" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="WoodFloor3" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="WoodFloor4" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="WoodFloor5" parent="." instance=ExtResource("1_e680u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)

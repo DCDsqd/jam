@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmmd0law5pl5p"]
+
+[ext_resource type="Script" path="res://objs/mini_games/3d_task/3d_task.gd" id="1_cdhbx"]
+
+[node name="ViewModel" type="SimpleViewModel"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+offset_right = 1156.0
+offset_bottom = 648.0
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(257, 122)
+render_target_update_mode = 4
+
+[node name="Node3D" type="Node3D" parent="Control/SubViewportContainer/SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="Control/SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.954766, 0.297358, 0, -0.297358, 0.954766, 0, 1, 1.57726)
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 231.0
+offset_right = 361.0
+offset_bottom = 288.0
+text = "click_me"
+script = ExtResource("1_cdhbx")
