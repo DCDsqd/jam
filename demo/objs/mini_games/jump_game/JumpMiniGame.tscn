@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3l0dcmkamxef"]
+[gd_scene load_steps=10 format=3 uid="uid://b3l0dcmkamxef"]
 
 [ext_resource type="Environment" uid="uid://4xfll0fcwfc8" path="res://res/shaders/env/dino_env.tres" id="1_p00hh"]
 [ext_resource type="PackedScene" uid="uid://cgdydi7j08yo4" path="res://objs/entity/dino.tscn" id="2_1jge6"]
 [ext_resource type="Script" path="res://objs/mini_games/jump_game/google_cactus.gd" id="3_htkp0"]
 [ext_resource type="Texture2D" uid="uid://dfghfxigsi3hv" path="res://res/sprites/items/google_cactus.png" id="3_q7drj"]
+[ext_resource type="Texture2D" uid="uid://b5hmi32vq5hpp" path="res://res/sprites/items/monitor2.png" id="5_vypat"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_oh44d"]
 size = Vector3(15, 1, 2.25)
@@ -27,17 +28,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
 layout_mode = 0
-offset_left = 203.0
+offset_left = 170.0
 offset_top = 81.0
-offset_right = 1747.0
-offset_bottom = 995.0
+offset_right = 1766.0
+offset_bottom = 970.0
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(1544, 914)
+size = Vector2i(1596, 889)
 render_target_update_mode = 4
 
 [node name="Node3D" type="Node3D" parent="Control/SubViewportContainer/SubViewport"]
@@ -87,3 +97,11 @@ shape = SubResource("BoxShape3D_y573m")
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("3_q7drj")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 66.0
+offset_right = 1789.0
+offset_bottom = 993.0
+texture = ExtResource("5_vypat")

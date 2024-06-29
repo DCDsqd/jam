@@ -23,6 +23,16 @@ void godot::CafeGetOrderInteractor::set_pos(Vector3 p_pos)
     this->pos = p_pos;
 }
 
+godot::String godot::CafeGetOrderInteractor::get_order_name()
+{
+    return this->order_name;
+}
+
+godot::Vector3 godot::CafeGetOrderInteractor::get_pos()
+{
+    return this->pos;
+}
+
 bool godot::CafeGetOrderInteractor::_interact(Entity *p_entity)
 {
     if(!has_order){

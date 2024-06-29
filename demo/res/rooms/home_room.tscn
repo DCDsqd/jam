@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://mv5fanqvet3w"]
+[gd_scene load_steps=4 format=3 uid="uid://mv5fanqvet3w"]
 
 [ext_resource type="PackedScene" uid="uid://dvrk3n8arnhni" path="res://objs/tiles/wood_floor.tscn" id="1_moso4"]
 [ext_resource type="PackedScene" uid="uid://c0ia2n1vx22lf" path="res://objs/tiles/single_wall.tscn" id="2_ltmog"]
 [ext_resource type="PackedScene" uid="uid://dpw6hgkw7n5n7" path="res://objs/tiles/briks_wall.tscn" id="3_vtubx"]
-[ext_resource type="PackedScene" uid="uid://ej30vvnr405" path="res://res/meshs/furniture/wardrobe.gltf" id="4_2awjr"]
 
 [node name="Home" type="Node3D"]
 
@@ -140,6 +139,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 5, 1)
 
 [node name="BriksWall18" parent="." instance=ExtResource("3_vtubx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5, 1)
-
-[node name="blockbench_export" parent="." instance=ExtResource("4_2awjr")]
-transform = Transform3D(-0.535, 0, 8.07828e-08, 0, 0.535, 0, -8.07828e-08, 0, -0.535, -1.63649, 0.0630078, -0.799903)

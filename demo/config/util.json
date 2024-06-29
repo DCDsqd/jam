@@ -1,3 +1,4 @@
 {
-	"selector_button": "res://util/param_button_impl.tscn"
+	"selector_button": "res://util/param_button_impl.tscn",
+	"bubble_spr": "res://util/bubble_spr.tscn"
 }

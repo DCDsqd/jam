@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://1vibennh8jo6"]
+[gd_scene load_steps=14 format=3 uid="uid://1vibennh8jo6"]
 
 [ext_resource type="PackedScene" uid="uid://cpal2j5bw454l" path="res://objs/entity/Hero.tscn" id="1_cak60"]
-[ext_resource type="PackedScene" uid="uid://ch7t0mltj8jjw" path="res://util/activator.tscn" id="1_dcouh"]
 [ext_resource type="PackedScene" uid="uid://b46i5i25441hj" path="res://objs/entity/Pc.tscn" id="3_5sb5h"]
 [ext_resource type="PackedScene" uid="uid://ck1i5y3byl6tx" path="res://objs/hud/menu/Menu.tscn" id="4_ln7uf"]
 [ext_resource type="PackedScene" uid="uid://mv5fanqvet3w" path="res://res/rooms/home_room.tscn" id="5_kbp23"]
 [ext_resource type="Environment" uid="uid://2rtchk2lapil" path="res://res/shaders/env/broken_room.tres" id="6_rw4mp"]
 [ext_resource type="PackedScene" uid="uid://vxrqdaslxtxp" path="res://objs/entity/apps_door.tscn" id="7_05c6s"]
+[ext_resource type="PackedScene" uid="uid://ej30vvnr405" path="res://res/meshs/furniture/wardrobe.gltf" id="9_4nul4"]
+[ext_resource type="PackedScene" uid="uid://c1lorl1ku62hb" path="res://objs/entity/Fridge.tscn" id="9_ta4js"]
+[ext_resource type="PackedScene" uid="uid://buolu2o337ywx" path="res://objs/entity/Bed.tscn" id="10_hfm67"]
+[ext_resource type="PackedScene" uid="uid://cu5apw2kcpjr4" path="res://res/meshs/furniture/Shelf_shkaf.gltf" id="11_xuiw8"]
+[ext_resource type="PackedScene" uid="uid://yfuro5vfhepv" path="res://res/meshs/furniture/Shelf.gltf" id="12_it2f4"]
+[ext_resource type="Texture2D" uid="uid://vdt4fwmq3gol" path="res://res/sprites/furniture/window.png" id="13_c1ekg"]
+[ext_resource type="PackedScene" uid="uid://dt56gvh7fa18k" path="res://res/meshs/furniture/Table.gltf" id="13_vvpg3"]
 
 [node name="Home" type="SingleHeroScene"]
 hero_key = "hero"
@@ -18,9 +24,10 @@ triggers_container_path = NodePath("Triggers")
 [node name="go_to_cafe" type="TriggerNextRoom" parent="Triggers"]
 next_scene = "res://scenes/cafe.tscn"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
+next_trigger = NodePath("TriggerMusic")
 
-[node name="activator" parent="Triggers/go_to_cafe" instance=ExtResource("1_dcouh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.450563, 0.486391, 0)
+[node name="TriggerMusic" type="TriggerMusic" parent="Triggers/go_to_cafe"]
+music = "res://res/sound/music/casino.wav"
 
 [node name="ECamera" type="ECamera" parent="."]
 transform = Transform3D(0.978509, -0.0365156, -0.202945, 0, 0.984196, -0.177085, 0.206204, 0.173279, 0.963044, -0.75, 0.715506, 1.95)
@@ -33,7 +40,7 @@ outside_delta = Vector3(0.5, 0.01, -1.3)
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.516948, 0)
 
 [node name="Pc" parent="." instance=ExtResource("3_5sb5h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50028, 0.289319, -1.10555)
+transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, 0.689593, 0.00777552, -0.654215)
 
 [node name="Hud" type="Hud" parent="."]
 offset_right = 40.0
@@ -53,3 +60,43 @@ shadow_enabled = true
 
 [node name="AppsDoor" parent="." instance=ExtResource("7_05c6s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97074, 0.472896, -0.0149546)
+
+[node name="blockbench_export2" parent="." instance=ExtResource("9_4nul4")]
+transform = Transform3D(-0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, -0.980795, 0.0996852, -0.641129)
+
+[node name="Fridge" parent="." instance=ExtResource("9_ta4js")]
+transform = Transform3D(-0.695, 0, 1.04942e-07, 0, 0.695, 0, -1.04942e-07, 0, -0.695, 2.24301, -0.000447161, -0.627836)
+
+[node name="Bed" parent="." instance=ExtResource("10_hfm67")]
+transform = Transform3D(-3.10351e-08, 0, 0.71, 0, 0.71, 0, -0.71, 0, -3.10351e-08, -2.42998, 0.000363998, -0.606255)
+
+[node name="blockbench_export" parent="." instance=ExtResource("11_xuiw8")]
+transform = Transform3D(0.486888, 0, -0.151789, 0, 0.51, 0, 0.151789, 0, 0.486888, 3.26445, 0.0157233, 0.662207)
+
+[node name="blockbench_export3" parent="." instance=ExtResource("11_xuiw8")]
+transform = Transform3D(0.503499, 0, 0.0811703, 0, 0.51, 0, -0.0811703, 0, 0.503499, -3.34144, 0.0157233, 0.662207)
+
+[node name="blockbench_export4" parent="." instance=ExtResource("12_it2f4")]
+transform = Transform3D(-3.16908e-08, 0, 0.725, 0, 0.725, 0, -0.725, 0, -3.16908e-08, -3.75191, 0.587533, -0.816305)
+
+[node name="blockbench_export5" parent="." instance=ExtResource("12_it2f4")]
+transform = Transform3D(-3.16908e-08, 0, 0.725, 0, 0.725, 0, -0.725, 0, -3.16908e-08, 1.22906, 0.886675, -0.816305)
+
+[node name="blockbench_export6" parent="." instance=ExtResource("12_it2f4")]
+transform = Transform3D(-3.16908e-08, 0, 0.725, 0, 0.725, 0, -0.725, 0, -3.16908e-08, 3.46229, 0.699609, -0.816305)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(2.36, 0, 0, 0, 2.36, 0, 0, 0, 2.36, -2.21021, 1.17339, -0.997482)
+texture_filter = 0
+texture = ExtResource("13_c1ekg")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Sprite3D"]
+transform = Transform3D(0.423729, 0, 0, 0, -0.36696, 0.211864, 0, -0.211864, -0.36696, 0, -0.0338176, 0.016806)
+light_energy = 5.0
+light_indirect_energy = 2.5
+shadow_enabled = true
+spot_range = 2.6188
+spot_angle = 55.3611
+
+[node name="blockbench_export7" parent="." instance=ExtResource("13_vvpg3")]
+transform = Transform3D(0.0897419, 0, 0.805013, 0, 0.81, 0, -0.805013, 0, 0.0897419, 4.25686, 0.000363998, -0.514614)

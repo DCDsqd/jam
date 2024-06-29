@@ -68,7 +68,7 @@ offset_bottom = 40.0
 [node name="CaffeController" type="CaffeController" parent="."]
 clients = Array[NodePath]([NodePath("../Custommer1"), NodePath("../Custommer2"), NodePath("../Custommer3")])
 order_tables = Array[NodePath]([NodePath("../OrderTable1"), NodePath("../OrderTable2"), NodePath("../OrderTable3")])
-orders = Array[String](["test_1", "test_2", "test_3"])
+orders = Array[String](["res://res/sprites/items/burger.png", "res://res/sprites/items/google_cactus.png", "res://res/sprites/items/monitor2.png"])
 camera_trigger_1 = NodePath("../triggers/order_camera")
 camera_trigger_2 = NodePath("../triggers/client_camera")
 end_trigger = NodePath("../triggers/TriggerTeleport")

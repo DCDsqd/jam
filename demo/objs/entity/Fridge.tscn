@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1lorl1ku62hb"]
+
+[ext_resource type="Script" path="res://objs/entity/Fridge.gd" id="1_2uhkb"]
+[ext_resource type="PackedScene" uid="uid://cso1gjc3xxg8s" path="res://res/meshs/furniture/Fridge.gltf" id="2_c3l1c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ak526"]
+size = Vector3(1, 2.38342, 0.872192)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ckauf"]
+height = 1.47497
+radius = 1.0
+
+[node name="Fridge" type="ModelEntity"]
+interact_path = NodePath("Area3D")
+script = ExtResource("1_2uhkb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19024, -0.0596313)
+shape = SubResource("BoxShape3D_ak526")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_ckauf")
+
+[node name="blockbench_export" parent="." instance=ExtResource("2_c3l1c")]

@@ -2,8 +2,13 @@ extends MultiSelectorModel
 
 
 func _ready():
-	var interactor1 : ActivateTriggerInteractor = ActivateTriggerInteractor.new()
-	interactor1.set_trigger("go_to_cafe")
+	var cafe_interactor : ActivateTriggerInteractor = ActivateTriggerInteractor.new()
+	cafe_interactor.set_trigger("go_to_cafe")
+	
+	var interactor1 : TimeSetInteractor = TimeSetInteractor.new();
+	interactor1.add_alloted_time(0)
+	interactor1.set_is_add_time(true)
+	interactor1.set_interactor(cafe_interactor)
 	
 	var interactor2 : ViewModelInteractor = ViewModelInteractor.new()
 	interactor2.set_view_model("res://objs/mini_games/jump_game/JumpMiniGame.tscn");

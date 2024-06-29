@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cetb5ytmjkpsy"]
+
+[ext_resource type="Script" path="res://objs/view_models/pc_selector.gd" id="1_gxbrq"]
+[ext_resource type="Texture2D" uid="uid://dfghfxigsi3hv" path="res://res/sprites/items/google_cactus.png" id="2_l5tl5"]
+
+[node name="AppsDoorSelector" type="MultiSelectorModel"]
+start_pos = NodePath("Control/Control")
+script = ExtResource("1_gxbrq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.0
+offset_top = -129.0
+offset_right = -61.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 455.0
+offset_right = 1010.0
+offset_bottom = 560.0
+texture = ExtResource("2_l5tl5")

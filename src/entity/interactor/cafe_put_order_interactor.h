@@ -27,7 +27,8 @@ public:
     void set_controller(CaffeController *p_controller);
     void set_order_name(String p_order_name);
     void set_pos(Vector3 p_pos);
-
+    String get_order_name();
+    Vector3 get_pos();
 
 	bool _interact(Entity *p_entity) override;
 	Interaction *_clone() override;

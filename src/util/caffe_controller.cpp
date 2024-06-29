@@ -1,5 +1,6 @@
 #include "caffe_controller.h"
 #include "godot_cpp/variant/utility_functions.hpp"
+#include "util/static_methods.hpp"
 
 
 bool godot::CaffeController::init_order(ModelEntity *mentity)
@@ -156,6 +157,25 @@ void godot::CaffeController::show_orders()
 {
     if(has_node(camera_trigger_1) && get_node<Trigger3D>(camera_trigger_1)){
         get_node<Trigger3D>(camera_trigger_1)->activate();
+
+        String value = Util::get_value_from_config("util", "bubble_spr");
+        if(value == String())
+            return;
+        
+        for(auto order_node : order_table_nodes){
+            Node *node = Util::spawn_node(value);
+
+            if(!node->cast_to<BubbleSpr>(node)){
+                UtilityFunctions::print("CaffeController: not a bubble_spr");
+                return;
+            }
+                
+            BubbleSpr *bubble = node->cast_to<BubbleSpr>(node);
+            add_child(bubble);
+            bubble->set_position(order_node->get_pos() + Vector3(0.0f, 1.5f, 0.0f));
+            bubble->set_sprite(order_node->get_order_name());
+        }
+
         return;
     }
     UtilityFunctions::print("CaffeController: camera_trigger_1 so bad");
@@ -165,6 +185,25 @@ void godot::CaffeController::show_clients()
 {
     if(has_node(camera_trigger_2) && get_node<Trigger3D>(camera_trigger_2)){
         get_node<Trigger3D>(camera_trigger_2)->activate();
+
+        String value = Util::get_value_from_config("util", "bubble_spr");
+        if(value == String())
+            return;
+
+        for(auto client_node : client_nodes){
+            Node *node = Util::spawn_node(value);
+
+            if(!node->cast_to<BubbleSpr>(node)){
+                UtilityFunctions::print("CaffeController: not a bubble_spr");
+                return;
+            }
+                
+            BubbleSpr *bubble = node->cast_to<BubbleSpr>(node);
+            add_child(bubble);
+            bubble->set_position(client_node->get_pos() + Vector3(0.0f, 1.5f, 0.0f));
+            bubble->set_sprite(client_node->get_order_name());
+        }
+
         return;
     }
     UtilityFunctions::print("CaffeController: camera_trigger_2 so bad");
@@ -200,6 +239,7 @@ void godot::CaffeController::end_game()
     GAME_STARTED = false;
 
     if(has_node(end_trigger) && get_node<Trigger3D>(end_trigger)){
+        StaticMethods::add_time();
         get_node<Trigger3D>(end_trigger)->activate();
         return;
     }

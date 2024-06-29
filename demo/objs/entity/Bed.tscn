@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://buolu2o337ywx"]
+
+[ext_resource type="Script" path="res://objs/entity/Bed.gd" id="1_e3852"]
+[ext_resource type="PackedScene" uid="uid://j1omdhyj1n1s" path="res://res/meshs/furniture/bad_bed.gltf" id="2_erjbt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ak526"]
+size = Vector3(1.00024, 0.877257, 2.37619)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ckauf"]
+height = 0.960607
+radius = 1.0
+
+[node name="Bed" type="ModelEntity"]
+interact_path = NodePath("Area3D")
+script = ExtResource("1_e3852")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.438987, 0)
+shape = SubResource("BoxShape3D_ak526")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.314792, 0)
+shape = SubResource("CylinderShape3D_ckauf")
+
+[node name="blockbench_export" parent="." instance=ExtResource("2_erjbt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.312879, 0, 0)

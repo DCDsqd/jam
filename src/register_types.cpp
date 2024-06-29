@@ -14,7 +14,9 @@
 #include "entity/interactor/activate_trigger_interactor.h"
 #include "entity/interactor/cafe_start_game_interactor.h"
 #include "entity/interactor/cafe_get_order_interactor.h"
-#include "entity/interactor/cafe_put_order_interactor.h"
+#include "entity/interactor/cafe_get_order_interactor.h"
+#include "entity/interactor/time_set_interactor.h"
+#include "entity/interactor/project_work_interactor.h"
 
 #include "entity/behaivor/hero_behaivor.h"
 
@@ -24,15 +26,20 @@
 #include "view_models/simple_view_model.h"
 #include "view_models/jump_mini_game.h"
 #include "view_models/multi_selector_model.h"
+#include "view_models/shading_view_model.h"
 
 #include "triggers/trigger_next_room.h"
 #include "triggers/trigger_teleport.h"
 #include "triggers/trigger_camera_target.h"
+#include "triggers/trigger_music.h"
+
+#include "musical_controller/simple_musical_controller.h"
 
 
 
 #include "util/param_button.h"
 #include "util/caffe_controller.h"
+#include "util/bubble_spr.h"
 
 
 #include <gdextension_interface.h>
@@ -51,12 +58,15 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<HumanInput>();
 	ClassDB::register_class<PlatformerMover3D>();
 	ClassDB::register_class<SimpleViewModel>();
+	ClassDB::register_class<DinoMover>();
+
 	ClassDB::register_class<ViewModelInteractor>();
 	ClassDB::register_class<CafeGetOrderInteractor>();
 	ClassDB::register_class<CafePutOrderInteractor>();
 	ClassDB::register_class<CaffeStartGameInteractor>();
 	ClassDB::register_class<ActivateTriggerInteractor>();
-	ClassDB::register_class<DinoMover>();
+	ClassDB::register_class<TimeSetInteractor>();
+	ClassDB::register_class<ProjectWorkInteractor>();
 
 	ClassDB::register_class<HeroBehaivor>();
 
@@ -66,13 +76,18 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<TriggerNextRoom>();
 	ClassDB::register_class<TriggerTeleport>();
 	ClassDB::register_class<TriggerCameraTarget>();
+	ClassDB::register_class<TriggerMusic>();
 
 	ClassDB::register_class<MultiSelectorModel>();
 	ClassDB::register_class<JumpMiniGame>();
+	ClassDB::register_class<ShadingViewModel>();
+
+	ClassDB::register_class<SimpleMusicalController>();
 
 
 	ClassDB::register_class<CaffeController>();
 	ClassDB::register_class<ParamButton>();
+	ClassDB::register_class<BubbleSpr>();
 
 
 	

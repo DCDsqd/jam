@@ -11,6 +11,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 648.0
 
