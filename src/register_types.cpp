@@ -13,6 +13,8 @@
 #include "entity/interactor/view_model_interactor.h"
 #include "entity/interactor/activate_trigger_interactor.h"
 
+#include "entity/behaivor/hero_behaivor.h"
+
 #include "menu/stat_menu.h"
 #include "menu/simple_game_menu.h"
 
@@ -45,6 +47,8 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<ViewModelInteractor>();
 	ClassDB::register_class<ActivateTriggerInteractor>();
 	ClassDB::register_class<DinoMover>();
+
+	ClassDB::register_class<HeroBehaivor>();
 
 	ClassDB::register_class<SimpleGameMenu>();
 	ClassDB::register_class<StatMenu>();
