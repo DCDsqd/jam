@@ -9,5 +9,9 @@ func _ready():
 	put_int("apps_check", 0)
 	put_int("hair_cut", 0)
 	
+	put_int("item_meat", 0)
+	put_int("item_coffe", 0)
+	put_int("item_bar", 0)
+	
 	swap_scene("res://scenes/home.tscn")
 

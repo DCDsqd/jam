@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://yla7clmqwske"]
+
+[ext_resource type="PackedScene" uid="uid://ch7t0mltj8jjw" path="res://util/activator.tscn" id="1_p2bqj"]
+[ext_resource type="PackedScene" uid="uid://d12pmgkapb58a" path="res://objs/hud/hud/Hud.tscn" id="3_4k4xv"]
+[ext_resource type="PackedScene" uid="uid://cpal2j5bw454l" path="res://objs/entity/Hero.tscn" id="4_hmvtw"]
+[ext_resource type="PackedScene" uid="uid://ub6cwiv8dghw" path="res://res/rooms/shoop_room.tscn" id="4_jj22f"]
+[ext_resource type="PackedScene" uid="uid://ck1i5y3byl6tx" path="res://objs/hud/menu/Menu.tscn" id="5_e52cu"]
+[ext_resource type="PackedScene" uid="uid://bb5m2kan06opq" path="res://objs/entity/shop_entity.tscn" id="5_mtjea"]
+
+[node name="Cafe" type="SingleHeroScene"]
+hero_key = "hero"
+hero_path = NodePath("Hero")
+triggers_container_path = NodePath("triggers")
+
+[node name="triggers" type="Node" parent="."]
+
+[node name="TriggerNextRoom" type="TriggerNextRoom" parent="triggers"]
+next_scene = "res://scenes/home.tscn"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.06493, 0.480677, -0.395986)
+next_trigger = NodePath("TriggerMusic")
+
+[node name="activator" parent="triggers/TriggerNextRoom" instance=ExtResource("1_p2bqj")]
+
+[node name="TriggerMusic" type="TriggerMusic" parent="triggers/TriggerNextRoom"]
+music = "res://res/sound/music/bordel-theme.wav"
+
+[node name="Hud" parent="." instance=ExtResource("3_4k4xv")]
+
+[node name="Hero" parent="." groups=["for_save"] instance=ExtResource("4_hmvtw")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.38387, 0.534223, -0.518677)
+
+[node name="ECamera" type="ECamera" parent="."]
+transform = Transform3D(0.996195, -0.0248993, -0.0835233, 0, 0.958323, -0.285688, 0.0871557, 0.284601, 0.954676, -4.84887, 0.549223, 1.95782)
+fov = 80.0
+target_path = NodePath("../Hero")
+speed_scale = 2.0
+outside_delta = Vector3(0.31, -0.01, -1.651)
+
+[node name="Menu" parent="." instance=ExtResource("5_e52cu")]
+
+[node name="ShoopRoom" parent="." instance=ExtResource("4_jj22f")]
+
+[node name="ShopEntity" parent="." instance=ExtResource("5_mtjea")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.196436, 0.375661, -1.41105)

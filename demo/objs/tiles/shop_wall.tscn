@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuqqwu3uhcr2o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2h1p"]
+albedo_color = Color(0.588235, 0.929412, 0.945098, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_5dpq3"]
+size = Vector2(2, 2)
+
+[node name="ShopWall" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_f2h1p")
+mesh = SubResource("QuadMesh_5dpq3")

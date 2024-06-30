@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4l37tkgb6c7k"]
+
+[ext_resource type="Texture2D" uid="uid://dxk3052f4j20" path="res://res/materials/shop_ceil/shopceiling.png" id="1_6iv7e"]
+[ext_resource type="Texture2D" uid="uid://ctfyo3jrdcnmj" path="res://res/materials/shop_ceil/shopceiling_s.png" id="2_2c51n"]
+[ext_resource type="Texture2D" uid="uid://b708al6t6atvs" path="res://res/materials/shop_ceil/shopceiling_n.png" id="3_qp4ao"]
+[ext_resource type="Material" uid="uid://dd1ufmjlilyfh" path="res://res/materials/briks/briks.tres" id="4_7is5n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_egqes"]
+transparency = 1
+albedo_texture = ExtResource("1_6iv7e")
+metallic = 1.0
+metallic_texture = ExtResource("2_2c51n")
+normal_enabled = true
+normal_texture = ExtResource("3_qp4ao")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bom05"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5wy0g"]
+
+[node name="Ceiling" type="MeshInstance3D"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -0.1, 0)
+material_override = SubResource("StandardMaterial3D_egqes")
+mesh = SubResource("PlaneMesh_bom05")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+material_override = ExtResource("4_7is5n")
+mesh = SubResource("PlaneMesh_5wy0g")

@@ -8,6 +8,7 @@
 #include <godot_cpp/classes/hud.hpp>
 #include <godot_cpp/classes/entity.hpp>
 #include <godot_cpp/classes/entity_data.hpp>
+#include <godot_cpp/classes/view_model.hpp>
 #include "godot_cpp/variant/utility_functions.hpp"
 #include "variants/hero_stats.hpp"
 #include "variants/task_pull.hpp"
@@ -83,15 +84,20 @@ public:
             return;
         }
 
-        if(cur_day >= 5){
-            end_game();
+        GameController *controller = EternityData::get_singleton()->get_controller();
+        if(controller == nullptr){
+            UtilityFunctions::print("StaticMethods: controller is null");
+            return;
+        }
+        if(!controller->has_int("game_time") || !controller->has_int("game_day")){
+            UtilityFunctions::print("StaticMethods: controller not have game_time or game_day");
+            return;
         }
 
 
-        GameController *controller = EternityData::get_singleton()->get_controller();
-
-        if(controller == nullptr){
-            UtilityFunctions::print("StaticMethods: controller is null");
+        if(cur_day >= 5){
+            //controller->put_int("game_day", cur_day+1);
+            end_game();
             return;
         }
         
@@ -102,7 +108,9 @@ public:
         }
 
         if(cur_day == 4 && controller->get_int(TaskPull::HairCut()) == 0){
+            //controller->put_int("game_day", cur_day+1);
             end_game();
+            return;
         }
 
 
@@ -150,27 +158,51 @@ public:
     }
 
     static void end_game(){
-        if(EternityData::get_singleton()->get_controller() == nullptr){
-            UtilityFunctions::print("StaticMethods: controller is null");
+        // if(EternityData::get_singleton()->get_controller() == nullptr){
+        //     UtilityFunctions::print("StaticMethods: controller is null");
+        //     return;
+        // }
+
+        String model_path = Util::get_value_from_config("util", "end_game_screen");
+
+        Node *node = Util::spawn_node(model_path);
+        if(node == nullptr){
+            UtilityFunctions::print("ViewModelInteractor: node is not created");
             return;
         }
 
-        GameController *controller = EternityData::get_singleton()->get_controller();
-
-        if(!controller->has_int(TaskPull::AppsCheck()) || 
-                !controller->has_int(TaskPull::HairCut()) || 
-                !controller->has_int(TaskPull::Project())  || 
-                !controller->has_int("game_day")){
-            UtilityFunctions::print("StaticMethods: controller don't have vars");
+        ViewModel *model = Object::cast_to<ViewModel>(node);
+        if(!model){
+            UtilityFunctions::print("ViewModelInteractor: node is not a viewModel");
             return;
         }
 
-        UtilityFunctions::print("Game end");
-        UtilityFunctions::print("Day: ", UtilityFunctions::var_to_str(controller->get_int("game_day") + 1));
-        UtilityFunctions::print("Your tasks: ");
-        UtilityFunctions::print("Project: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::Project())));
-        UtilityFunctions::print("AppCheck: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::AppsCheck())));
-        UtilityFunctions::print("HairCut: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::HairCut())));
+        Hud* hud = EternityData::get_singleton()->get_hud();
+
+        if(hud == nullptr){
+            UtilityFunctions::print("ViewModelInteractor: hud is null");
+            return;
+        }
+
+        hud->add_child(model);
+        model->open_window(nullptr, nullptr);
+
+        // GameController *controller = EternityData::get_singleton()->get_controller();
+
+        // if(!controller->has_int(TaskPull::AppsCheck()) || 
+        //         !controller->has_int(TaskPull::HairCut()) || 
+        //         !controller->has_int(TaskPull::Project())  || 
+        //         !controller->has_int("game_day")){
+        //     UtilityFunctions::print("StaticMethods: controller don't have vars");
+        //     return;
+        // }
+
+        // UtilityFunctions::print("Game end");
+        // UtilityFunctions::print("Day: ", UtilityFunctions::var_to_str(controller->get_int("game_day") + 1));
+        // UtilityFunctions::print("Your tasks: ");
+        // UtilityFunctions::print("Project: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::Project())));
+        // UtilityFunctions::print("AppCheck: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::AppsCheck())));
+        // UtilityFunctions::print("HairCut: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::HairCut())));
     }
     
 };

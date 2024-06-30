@@ -4,5 +4,7 @@
 	"result_view": "res://objs/view_models/result_caffe.tscn",
 	
 	"correct_cloud": "res://res/sprites/items/complite.png",
-	"bad_cloud": "res://res/sprites/items/none.png"
+	"bad_cloud": "res://res/sprites/items/none.png",
+	
+	"end_game_screen": "res://objs/view_models/end_game.tscn"
 }

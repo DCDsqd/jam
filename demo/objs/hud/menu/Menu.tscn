@@ -8,6 +8,7 @@ container_path = NodePath("Control")
 elements_path = Array[NodePath]([NodePath("Control/TabContainer/StatMenu")])
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 0
 

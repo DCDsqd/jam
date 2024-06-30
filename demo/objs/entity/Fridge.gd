@@ -6,7 +6,7 @@ func _ready():
 	var data : EntityData = EntityDataImpl.new()
 	var interaction : ViewModelInteractor = ViewModelInteractor.new()
 	
-	interaction.set_view_model("res://objs/mini_games/cleaning/clean_skip.tscn");
+	interaction.set_view_model("res://objs/view_models/fridge_selector.tscn");
 	
 	entity.set_data(data)
 	entity.set_interaction(interaction)

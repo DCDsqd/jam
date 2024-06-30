@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6j78b17um1nr"]
+
+[ext_resource type="Texture2D" uid="uid://c4evlyej8xjcr" path="res://res/materials/shopfloor/shopfloor.png" id="1_k8kpy"]
+[ext_resource type="Texture2D" uid="uid://ihqaeflaqtpi" path="res://res/materials/shopfloor/shopfloor_p.png" id="2_x00om"]
+[ext_resource type="Texture2D" uid="uid://b240wee1ol2y2" path="res://res/materials/shopfloor/shopfloor_s.png" id="3_88te3"]
+[ext_resource type="Texture2D" uid="uid://bw2yiyhjrebix" path="res://res/materials/shopfloor/shopfloor_n.png" id="4_s8ci3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qq50t"]
+albedo_texture = ExtResource("1_k8kpy")
+metallic = 1.0
+metallic_texture = ExtResource("3_88te3")
+normal_enabled = true
+normal_texture = ExtResource("4_s8ci3")
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_texture = ExtResource("2_x00om")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1ytxa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ih4wq"]
+size = Vector3(2, 0.25, 2)
+
+[node name="WoodFloor" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_qq50t")
+mesh = SubResource("PlaneMesh_1ytxa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.124636, 0)
+shape = SubResource("BoxShape3D_ih4wq")

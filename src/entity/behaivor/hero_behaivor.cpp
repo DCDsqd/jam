@@ -42,9 +42,53 @@ void godot::HeroBehaivor::calculate_stats()
 
     UtilityFunctions::print("HeroBehaivor: calculate new values");
 
+    float effective = 1.0f;
+    float productive = 1.0f;
+    float dream = 1.0f;
     
-    
-    
+    if(data->has_float(HeroStats::sleep())){
+        float sleep = data->get_float(HeroStats::sleep());
+        if(sleep < -0.25f){
+            effective -= 0.25f;
+
+            if(sleep < -0.5f)
+                effective -= 0.25f;
+        }
+        if(sleep > 0.25f){
+            productive += 0.25f;
+        }
+    }
+
+    if(data->has_float(HeroStats::happy())){
+        float happy = data->get_float(HeroStats::happy());
+        if(happy < -0.25f){
+            productive -= 0.25f;
+
+            if(happy < -0.5f)
+                effective -= 0.25f;
+        }
+        if(happy > 0.25f){
+            effective += 0.25f;
+        }
+    }
+
+    if(data->has_float(HeroStats::hunger())){
+        float hunger = data->get_float(HeroStats::hunger());
+        if(hunger < -0.25f){
+            productive -= 0.25f;
+
+            if(hunger < -0.5f)
+                effective -= 0.25f;
+        }
+        if(hunger > 0.25f){
+            effective += 0.25f;
+        }
+    }
+
+    data->put_float(HeroStats::effective(), effective);
+    data->put_float(HeroStats::productive(), productive);
+    data->put_float(HeroStats::dream(), dream);
+
 }
 
 godot::HeroBehaivor::HeroBehaivor()

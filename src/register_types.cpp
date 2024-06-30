@@ -30,6 +30,7 @@
 #include "view_models/multi_selector_model.h"
 #include "view_models/shading_view_model.h"
 #include "view_models/caffe_result.h"
+#include "view_models/end_game_model.h"
 
 #include "triggers/trigger_next_room.h"
 #include "triggers/trigger_teleport.h"
@@ -89,6 +90,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<JumpMiniGame>();
 	ClassDB::register_class<ShadingViewModel>();
 	ClassDB::register_class<CaffeResult>();
+	ClassDB::register_class<EndGameModel>();
 
 	ClassDB::register_class<SimpleMusicalController>();
 

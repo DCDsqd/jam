@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb5m2kan06opq"]
+
+[ext_resource type="Script" path="res://objs/entity/shop_entity.gd" id="1_dei3i"]
+[ext_resource type="PackedScene" uid="uid://cpiujycxp6fv8" path="res://res/meshs/furniture/cash_desk.gltf" id="2_o00j0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ii2a"]
+size = Vector3(1.45508, 0.936646, 1.01367)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_810xq"]
+height = 0.92976
+radius = 1.0
+
+[node name="ShopEntity" type="ModelEntity"]
+interact_path = NodePath("Area3D")
+script = ExtResource("1_dei3i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00683594, 0.1026, 0.078125)
+shape = SubResource("BoxShape3D_0ii2a")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_810xq")
+
+[node name="blockbench_export" parent="." instance=ExtResource("2_o00j0")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.265015, -0.367572, 0)

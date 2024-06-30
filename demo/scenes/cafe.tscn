@@ -20,9 +20,13 @@ triggers_container_path = NodePath("triggers")
 [node name="TriggerNextRoom" type="TriggerNextRoom" parent="triggers"]
 next_scene = "res://scenes/home.tscn"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+next_trigger = NodePath("TriggerMusic")
 
 [node name="activator" parent="triggers/TriggerNextRoom" instance=ExtResource("1_cuk6y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45056, 0.486391, 0)
+
+[node name="TriggerMusic" type="TriggerMusic" parent="triggers/TriggerNextRoom"]
+music = "res://res/sound/music/bordel-theme.wav"
 
 [node name="order_camera" type="TriggerCameraTarget" parent="triggers"]
 marker = NodePath("Marker3D2")

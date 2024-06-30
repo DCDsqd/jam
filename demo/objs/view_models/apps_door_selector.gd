@@ -19,11 +19,21 @@ func _ready():
 	interactor2.set_is_add_time(true)
 	interactor2.set_interactor(friends_meet)
 	
+	var shop_interactor : ActivateTriggerInteractor = ActivateTriggerInteractor.new()
+	shop_interactor.set_trigger("go_to_shop")
+	
+	var interactor3 : TimeSetInteractor = TimeSetInteractor.new();
+	interactor3.add_alloted_time(1)
+	interactor3.add_alloted_time(2)
+	interactor3.set_is_add_time(true)
+	interactor3.set_interactor(shop_interactor)
+	
 	var cancel : Interaction = Interaction.new()
 	
 	set_offset(Vector2(20, 120))
 	add_interactor("Работать в кафе", interactor1)
 	add_interactor("Встретиться с друзьями", interactor2)
+	add_interactor("Сходить в магазин", interactor3)
 	add_interactor("Отмена", cancel)
 	
 	eventer()
@@ -39,7 +49,7 @@ func eventer():
 	var day : int = EternityData.get_controller().get_int("game_day")
 	var time : int = EternityData.get_controller().get_int("game_time")
 	
-	if(day == 0 and time == 1):
+	if(day == 3 and time == 1):
 		add_hair()
 	
 

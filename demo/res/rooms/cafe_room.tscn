@@ -1,31 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcmpqyfcok40g"]
+[gd_scene load_steps=6 format=3 uid="uid://bcmpqyfcok40g"]
 
 [ext_resource type="PackedScene" uid="uid://dvrk3n8arnhni" path="res://objs/tiles/wood_floor.tscn" id="1_e680u"]
 [ext_resource type="PackedScene" uid="uid://c0ia2n1vx22lf" path="res://objs/tiles/single_wall.tscn" id="2_onf6f"]
 [ext_resource type="PackedScene" uid="uid://b1e5i51kci67t" path="res://res/meshs/furniture/bar_stand.gltf" id="3_a84ke"]
+[ext_resource type="Environment" uid="uid://bk0s0ctegvngt" path="res://res/shaders/env/cafe_room.tres" id="4_grev7"]
 [ext_resource type="Texture2D" uid="uid://bjq2tpwid1k53" path="res://res/sprites/furniture/lamp.png" id="4_s6gd8"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vejme"]
-sky_top_color = Color(0.690196, 0.164706, 0.713726, 1)
-sky_horizon_color = Color(0.847059, 0.592157, 0.380392, 1)
-
-[sub_resource type="Sky" id="Sky_8gq4c"]
-sky_material = SubResource("ProceduralSkyMaterial_vejme")
-
-[sub_resource type="Environment" id="Environment_kg123"]
-background_mode = 2
-background_energy_multiplier = 0.1
-sky = SubResource("Sky_8gq4c")
-tonemap_mode = 2
-tonemap_exposure = 0.8
-ssr_enabled = true
-ssao_enabled = true
-ssil_enabled = true
-sdfgi_enabled = true
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.07
-volumetric_fog_albedo = Color(0.929412, 0.713726, 0.788235, 1)
-volumetric_fog_emission_energy = 2.0
 
 [node name="CafeScene" type="Node3D"]
 
@@ -261,7 +240,7 @@ transform = Transform3D(-0.695, 0, -1.04942e-07, 0, 0.695, 0, 1.04942e-07, 0, -0
 transform = Transform3D(-0.675933, 0, 0.161678, 0, 0.695, 0, -0.161678, 0, -0.675933, 7.11776, 0.000363998, -2.25886)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_kg123")
+environment = ExtResource("4_grev7")
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.68539, -0.561744)

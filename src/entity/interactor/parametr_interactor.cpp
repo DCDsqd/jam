@@ -54,7 +54,7 @@ bool godot::ParametrInteractor::check_value(Entity *p_entity)
             return false;
         }
         if(data->get_float(i.key) < i.value){
-            UtilityFunctions::print("ParametrInteractor: data float so low: ", controller->get_float(i.key), " needed: ", i.value);
+            UtilityFunctions::print("ParametrInteractor: data float so low: ", data->get_float(i.key), " needed: ", i.value);
             return false;
         }
     }

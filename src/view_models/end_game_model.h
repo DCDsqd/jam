@@ -5,11 +5,14 @@
 #include <godot_cpp/classes/moving_entity.hpp>
 #include <godot_cpp/classes/view_model.hpp>
 #include <godot_cpp/classes/eternity_data.hpp>
+#include <godot_cpp/classes/game_controller.hpp>
+#include <godot_cpp/classes/util.hpp>
 #include <godot_cpp/classes/hud.hpp>
 #include <godot_cpp/classes/entity.hpp>
 #include <godot_cpp/classes/label.hpp>
 #include <godot_cpp/classes/rich_text_label.hpp>
 #include <godot_cpp/classes/input.hpp>
+#include <godot_cpp/classes/scene_tree.hpp>
 
 namespace godot {
 
@@ -26,6 +29,11 @@ protected:
     NodePath result_path;
 
     float timer;
+
+    void init_links();
+    void update_info();
+
+    String bool_to_str(bool param);
 
 public:
     void set_main_info_path(NodePath p_main_info_path);
