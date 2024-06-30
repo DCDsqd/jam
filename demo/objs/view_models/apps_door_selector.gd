@@ -22,9 +22,31 @@ func _ready():
 	var cancel : Interaction = Interaction.new()
 	
 	set_offset(Vector2(20, 120))
-	add_interactor("Пойти в кафе", interactor1)
+	add_interactor("Работать в кафе", interactor1)
 	add_interactor("Встретиться с друзьями", interactor2)
 	add_interactor("Отмена", cancel)
 	
+	eventer()
 	#add_interactor("Пойти в кафе", )
 
+func eventer():
+	if(!EternityData.get_controller()):
+		return
+	
+	if(!EternityData.get_controller().has_int("game_day") or !EternityData.get_controller().has_int("game_time")):
+		return
+		
+	var day : int = EternityData.get_controller().get_int("game_day")
+	var time : int = EternityData.get_controller().get_int("game_time")
+	
+	if(day == 0 and time == 1):
+		add_hair()
+	
+
+func add_hair():
+	var hair_cutter : ParametrInteractor = ParametrInteractor.new()
+	hair_cutter.check_param_entity("res_money", 500.0)
+	hair_cutter.plus_param_controller("hair_cut", 1)
+	hair_cutter.plus_param_entity("res_money", -500.0)
+	hair_cutter.set_add_day(true)
+	add_interactor("Сходить в парихмахерскую", hair_cutter)

@@ -100,7 +100,7 @@ void godot::SimpleEntityBuilder::set_stats()
     }
     get_data()->put_string(HeroStats::cafe_order(), "");
 
-    get_data()->put_float(HeroStats::money(), 1.0);
+    get_data()->put_float(HeroStats::money(), 500.0);
     get_data()->put_float(HeroStats::productive(), 1.0);
     get_data()->put_float(HeroStats::effective(), 1.0);
     get_data()->put_float(HeroStats::dream(), 1.0);

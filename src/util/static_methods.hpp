@@ -10,6 +10,7 @@
 #include <godot_cpp/classes/entity_data.hpp>
 #include "godot_cpp/variant/utility_functions.hpp"
 #include "variants/hero_stats.hpp"
+#include "variants/task_pull.hpp"
 
 namespace godot{
 
@@ -33,6 +34,7 @@ public:
         controller->put_int("lock_door", 0);
         
         if(time == 2){
+            check_end(day+1);
             controller->put_int("game_time", 0);
             controller->put_int("game_day", day+1);
             update_hero();
@@ -61,7 +63,8 @@ public:
         }
 
         int day = controller->get_int("game_day");
-        
+        check_end(day+1);
+
         controller->put_int("lock_door", 0);
 
         controller->put_int("game_time", 0);
@@ -73,6 +76,38 @@ public:
         }else{
             UtilityFunctions::print("StaticMethods: hud is null");
         }
+    }
+
+    static void check_end(int cur_day){
+        if(cur_day < 3){
+            return;
+        }
+
+        if(cur_day >= 5){
+            end_game();
+        }
+
+
+        GameController *controller = EternityData::get_singleton()->get_controller();
+
+        if(controller == nullptr){
+            UtilityFunctions::print("StaticMethods: controller is null");
+            return;
+        }
+        
+
+        if(!controller->has_int(TaskPull::HairCut())){
+            UtilityFunctions::print("StaticMethods: controller don't have haircut");
+            return;
+        }
+
+        if(cur_day == 4 && controller->get_int(TaskPull::HairCut()) == 0){
+            end_game();
+        }
+
+
+
+        //if(cur_day == 3 && con)
     }
 
     static void update_hero(){
@@ -112,6 +147,30 @@ public:
 
         scene->add_child(node);
         node->set_global_position(position);
+    }
+
+    static void end_game(){
+        if(EternityData::get_singleton()->get_controller() == nullptr){
+            UtilityFunctions::print("StaticMethods: controller is null");
+            return;
+        }
+
+        GameController *controller = EternityData::get_singleton()->get_controller();
+
+        if(!controller->has_int(TaskPull::AppsCheck()) || 
+                !controller->has_int(TaskPull::HairCut()) || 
+                !controller->has_int(TaskPull::Project())  || 
+                !controller->has_int("game_day")){
+            UtilityFunctions::print("StaticMethods: controller don't have vars");
+            return;
+        }
+
+        UtilityFunctions::print("Game end");
+        UtilityFunctions::print("Day: ", UtilityFunctions::var_to_str(controller->get_int("game_day") + 1));
+        UtilityFunctions::print("Your tasks: ");
+        UtilityFunctions::print("Project: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::Project())));
+        UtilityFunctions::print("AppCheck: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::AppsCheck())));
+        UtilityFunctions::print("HairCut: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::HairCut())));
     }
     
 };

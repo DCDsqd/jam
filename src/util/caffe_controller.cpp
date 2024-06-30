@@ -271,7 +271,7 @@ void godot::CaffeController::calculate_score()
 
     float productive = player->get_data()->get_float(HeroStats::productive());
 
-    float result = start_money * (score/10 + time_bonus/10)*productive;
+    float result = start_money * (1 + score/10 + time_bonus/10)*productive;
 
     info += Util::get_value_from_config("word", "result_caffe_score") + 
         UtilityFunctions::var_to_str(score) + "\n";

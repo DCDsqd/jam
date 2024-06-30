@@ -8,38 +8,21 @@ namespace godot{
 class TaskPull{
 
 public:
-    static String Sleep(){
-        return "task_sleep";
+    static String Project(){
+        return "project_progress";
     }
 
     static String Work(){
         return "task_work";
     }
 
-    static String Chill(){
-        return "task_chill";
+    static String AppsCheck(){
+        return "apps_check";
     }
 
-    static String Shop(){
-        return "task_shop";
+    static String HairCut(){
+        return "hair_cut";
     }
-    
-    static String FriendMeeting(){
-        return "task_friend_meeting";
-    }
-
-    static String Trim(){
-        return "task_trim";
-    }
-
-    static String Teeth(){
-        return "task_teeth";
-    }
-
-    static String Project(){
-        return "task_project";
-    }
-
 };
 
 }

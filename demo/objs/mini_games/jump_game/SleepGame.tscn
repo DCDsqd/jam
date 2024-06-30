@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://brqysxbuxafx8"]
+[gd_scene load_steps=11 format=3 uid="uid://brqysxbuxafx8"]
 
 [ext_resource type="Script" path="res://objs/mini_games/jump_game/SleepGame.gd" id="1_s2xhc"]
 [ext_resource type="Environment" uid="uid://bj88yy6obtpiv" path="res://res/shaders/env/sleep_game.tres" id="1_ypeb7"]
 [ext_resource type="PackedScene" uid="uid://cgdydi7j08yo4" path="res://objs/entity/dino.tscn" id="2_hgues"]
 [ext_resource type="Script" path="res://objs/mini_games/jump_game/google_cactus.gd" id="3_agsmv"]
 [ext_resource type="Texture2D" uid="uid://dfghfxigsi3hv" path="res://res/sprites/items/google_cactus.png" id="4_gov8v"]
-[ext_resource type="Texture2D" uid="uid://b5hmi32vq5hpp" path="res://res/sprites/items/monitor2.png" id="5_uv6s6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qo45q"]
 albedo_color = Color(0.541176, 0.172549, 0.619608, 1)
@@ -33,26 +32,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.627451)
-
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
 layout_mode = 0
-offset_left = 170.0
-offset_top = 81.0
-offset_right = 1766.0
-offset_bottom = 970.0
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 1919.0
+offset_bottom = 1080.0
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(1596, 889)
+size = Vector2i(1918, 1083)
 render_target_update_mode = 4
 
 [node name="Node3D" type="Node3D" parent="Control/SubViewportContainer/SubViewport"]
@@ -110,11 +100,3 @@ shape = SubResource("BoxShape3D_y573m")
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("4_gov8v")
-
-[node name="TextureRect" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = 143.0
-offset_top = 66.0
-offset_right = 1789.0
-offset_bottom = 993.0
-texture = ExtResource("5_uv6s6")

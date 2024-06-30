@@ -8,6 +8,7 @@
 #include <godot_cpp/classes/game_controller.hpp>
 #include <godot_cpp/classes/util.hpp>
 #include <godot_cpp/classes/hud.hpp>
+#include <godot_cpp/classes/view_model.hpp>
 
 #include <set>
 
@@ -27,6 +28,8 @@ protected:
 public:
     void set_step_two(String p_step_two);
     void set_step_four(String p_step_four);
+
+    void spawn_game(String model_path, Entity *p_entity);
 
 	bool _interact(Entity *p_entity) override;
 	Interaction *_clone() override;

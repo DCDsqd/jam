@@ -9,6 +9,7 @@ func _ready():
 	time_skip.add_alloted_time(1)
 	time_skip.add_alloted_time(2)
 	time_skip.set_interactor(clean_interactor)
+	time_skip.set_is_add_time(true)
 	
 	var cancel_interactor : Interaction = Interaction.new()
 	

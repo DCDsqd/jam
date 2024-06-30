@@ -44,6 +44,7 @@ void godot::HeroBehaivor::calculate_stats()
 
     
     
+    
 }
 
 godot::HeroBehaivor::HeroBehaivor()

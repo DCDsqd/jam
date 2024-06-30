@@ -139,8 +139,8 @@ void StatMenu::set_progress_bar(ProgressBar *bar, EntityData *data, String name,
         return;
     }
 
-    bar->set_max(1.0);
-    bar->set_min(-1.0);
+    bar->set_max(0.5);
+    bar->set_min(-0.5);
     bar->set_value(data->get_float(key));
 }
 

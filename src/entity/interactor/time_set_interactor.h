@@ -23,7 +23,7 @@ protected:
 
     std::set<int> alloted_time;
     std::set<String> lock_events;
-    bool add_time;
+    bool add_time = false;
 
 public:
     void set_interactor(Interaction *p_interactor);
@@ -31,6 +31,8 @@ public:
     void add_alloted_time(int p_alloted_time);
     void add_lock_event(String p_lock_event);
     void set_is_add_time(bool p_add_time);
+
+    void set_add_time(bool p_add_time);
 
 	bool _interact(Entity *p_entity) override;
 	Interaction *_clone() override;

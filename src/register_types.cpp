@@ -17,6 +17,8 @@
 #include "entity/interactor/cafe_get_order_interactor.h"
 #include "entity/interactor/time_set_interactor.h"
 #include "entity/interactor/project_work_interactor.h"
+#include "entity/interactor/sleep_interactor.h"
+#include "entity/interactor/parametr_interactor.h"
 
 #include "entity/behaivor/hero_behaivor.h"
 
@@ -68,6 +70,8 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<ActivateTriggerInteractor>();
 	ClassDB::register_class<TimeSetInteractor>();
 	ClassDB::register_class<ProjectWorkInteractor>();
+	ClassDB::register_class<SleepInteractor>();
+	ClassDB::register_class<ParametrInteractor>();
 
 	ClassDB::register_class<HeroBehaivor>();
 
