@@ -1,58 +1,64 @@
 {
 	"sound_chill" : [
-		"res://res/sound/voice/test/coin.wav",
-		"res://res/sound/voice/test/hp.wav",
-		"res://res/sound/voice/test/keyboard.wav",
-		"res://res/sound/voice/test/coin_2.wav",
-		"res://res/sound/voice/test/hp_minus.wav"
+		"res://res/sound/voice/chill/rest1.wav",
+		"res://res/sound/voice/chill/rest2.wav",
+		"res://res/sound/voice/chill/rest3.wav",
+		"res://res/sound/voice/chill/rest4.wav",
+		"res://res/sound/voice/chill/rest5.wav"
 	],
 	"sound_clean" : [
-		"res://res/sound/voice/test/coin.wav",
-		"res://res/sound/voice/test/hp.wav",
-		"res://res/sound/voice/test/keyboard.wav",
-		"res://res/sound/voice/test/coin_2.wav",
-		"res://res/sound/voice/test/hp_minus.wav"
+		"res://res/sound/voice/clean/clean1.wav",
+		"res://res/sound/voice/clean/clean2.wav",
+		"res://res/sound/voice/clean/clean3.wav",
+		"res://res/sound/voice/clean/clean4.wav",
+		"res://res/sound/voice/clean/clean5.wav"
 	],
 	"sound_friends" : [
-		"res://res/sound/voice/test/coin.wav",
-		"res://res/sound/voice/test/hp.wav",
-		"res://res/sound/voice/test/keyboard.wav",
-		"res://res/sound/voice/test/coin_2.wav",
-		"res://res/sound/voice/test/hp_minus.wav"
+		"res://res/sound/voice/firends/friend1.wav",
+		"res://res/sound/voice/firends/friend2.wav",
+		"res://res/sound/voice/firends/friend3.wav",
+		"res://res/sound/voice/firends/friend4.wav",
+		"res://res/sound/voice/firends/friend5.wav"
 	],
 	"sound_morning" : [
-		"res://res/sound/voice/test/coin.wav",
-		"res://res/sound/voice/test/hp.wav",
-		"res://res/sound/voice/test/keyboard.wav",
-		"res://res/sound/voice/test/coin_2.wav",
-		"res://res/sound/voice/test/hp_minus.wav"
+		"res://res/sound/voice/morning/wakeup1.wav",
+		"res://res/sound/voice/morning/wakeup2.wav",
+		"res://res/sound/voice/morning/wakeup3.wav",
+		"res://res/sound/voice/morning/wakeup4.wav",
+		"res://res/sound/voice/morning/wakeup5.wav"
 	],
 	"sound_project" : [
-		"res://res/sound/voice/test/coin.wav",
-		"res://res/sound/voice/test/hp.wav",
-		"res://res/sound/voice/test/keyboard.wav",
-		"res://res/sound/voice/test/coin_2.wav",
-		"res://res/sound/voice/test/hp_minus.wav"
+		"res://res/sound/voice/project/project1.wav",
+		"res://res/sound/voice/project/project2.wav",
+		"res://res/sound/voice/project/project3.wav",
+		"res://res/sound/voice/project/project4.wav",
+		"res://res/sound/voice/project/project5.wav"
 	],
 	"sound_shop" : [
-		"res://res/sound/voice/test/coin.wav",
-		"res://res/sound/voice/test/hp.wav",
-		"res://res/sound/voice/test/keyboard.wav",
-		"res://res/sound/voice/test/coin_2.wav",
-		"res://res/sound/voice/test/hp_minus.wav"
+		"res://res/sound/voice/shop/shop1.wav",
+		"res://res/sound/voice/shop/shop2.wav",
+		"res://res/sound/voice/shop/shop3.wav",
+		"res://res/sound/voice/shop/shop4.wav",
+		"res://res/sound/voice/shop/shop5.wav"
 	],
 	"sound_sleep" : [
-		"res://res/sound/voice/test/coin.wav",
-		"res://res/sound/voice/test/hp.wav",
-		"res://res/sound/voice/test/keyboard.wav",
-		"res://res/sound/voice/test/coin_2.wav",
-		"res://res/sound/voice/test/hp_minus.wav"
+		"res://res/sound/voice/sleep/sleep1.wav",
+		"res://res/sound/voice/sleep/sleep2.wav",
+		"res://res/sound/voice/sleep/sleep3.wav",
+		"res://res/sound/voice/sleep/sleep4.wav",
+		"res://res/sound/voice/sleep/sleep5.wav"
 	],
 	"sound_work" : [
-		"res://res/sound/voice/test/coin.wav",
-		"res://res/sound/voice/test/hp.wav",
-		"res://res/sound/voice/test/keyboard.wav",
-		"res://res/sound/voice/test/coin_2.wav",
-		"res://res/sound/voice/test/hp_minus.wav"
+		"res://res/sound/voice/work/work1.wav",
+		"res://res/sound/voice/work/work2.wav",
+		"res://res/sound/voice/work/work3.wav",
+		"res://res/sound/voice/work/work4.wav",
+		"res://res/sound/voice/work/work5.wav"
+	],
+	"sound_hair" : [
+		"res://res/sound/voice/oneshot_sound/haircut.wav"
+	],
+	"sound_pay" : [
+		"res://res/sound/voice/oneshot_sound/bogdanzo_debt.wav"
 	]
 }

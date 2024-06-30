@@ -17,3 +17,4 @@ script = ExtResource("2_trd7b")
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="SimpleMusicalController"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 5.0

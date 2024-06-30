@@ -28,7 +28,7 @@ protected:
     NodePath main_info_path;
     NodePath result_path;
 
-    float timer;
+    float timer = 20.0f;
 
     void init_links();
     void update_info();

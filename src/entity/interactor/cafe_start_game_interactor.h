@@ -19,6 +19,7 @@ class CaffeStartGameInteractor : public Interaction {
 
 protected:
     static void _bind_methods();
+    bool activate = false;
 
 public:
 	bool _interact(Entity *p_entity) override;

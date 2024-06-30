@@ -29,12 +29,15 @@ protected:
     HashMap<String, int> map_plus_param_controller;
     
     bool add_day = false;
+    String sound_key = String();
 
     bool check_valide(Entity *p_entity);
     bool check_value(Entity *p_entity);
     void set_value(Entity *p_entity);
 
 public:
+    void set_sound_key(String p_sound_key);
+
     void check_param_entity(String key, float value);
     void check_param_controller(String key, int value);
 

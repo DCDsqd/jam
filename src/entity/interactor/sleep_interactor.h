@@ -21,11 +21,13 @@ protected:
     static void _bind_methods();
 
     String model_path;
+    String sound_key = String();
 
     void spawn_game(Entity *p_entity);
 
 public:
     void set_view_model(String p_model_path);
+    void set_sound_key(String p_sound_key);
 
 	bool _interact(Entity *p_entity) override;
 	Interaction *_clone() override;

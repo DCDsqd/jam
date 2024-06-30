@@ -4,6 +4,7 @@ extends MultiSelectorModel
 func _ready():
 	var time_skip : SleepInteractor = SleepInteractor.new()
 	time_skip.set_view_model("res://objs/mini_games/jump_game/SleepGame.tscn")
+	time_skip.set_sound_key("sound_sleep")
 	
 	var cancel_interactor : Interaction = Interaction.new()
 	

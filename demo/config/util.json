@@ -7,5 +7,6 @@
 	"bad_cloud": "res://res/sprites/items/none.png",
 	
 	"end_game_screen": "res://objs/view_models/end_game.tscn",
-	"audio_map": "res://config/sound_map.json"
+	"audio_map": "res://config/sound_map.json",
+	"message_model_impl" : "res://util/message_model_impl.tscn"
 }

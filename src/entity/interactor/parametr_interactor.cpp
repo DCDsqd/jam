@@ -4,6 +4,8 @@
 
 void godot::ParametrInteractor::_bind_methods()
 {
+    ClassDB::bind_method(D_METHOD("set_sound_key"), &ParametrInteractor::set_sound_key);
+
     ClassDB::bind_method(D_METHOD("set_add_day"), &ParametrInteractor::set_add_day);
 
     ClassDB::bind_method(D_METHOD("check_param_entity"), &ParametrInteractor::check_param_entity);
@@ -87,6 +89,11 @@ void godot::ParametrInteractor::set_value(Entity *p_entity)
 
 }
 
+void godot::ParametrInteractor::set_sound_key(String p_sound_key)
+{
+    this->sound_key = p_sound_key;
+}
+
 void godot::ParametrInteractor::check_param_entity(String key, float value)
 {
     this->map_check_param_entity[key] = value;
@@ -124,6 +131,9 @@ bool godot::ParametrInteractor::_interact(Entity *p_entity)
 
         if(add_day)
             StaticMethods::add_time();
+
+        if(sound_key != String())
+            StaticMethods::play_sound(sound_key);
 
         return true;
     }

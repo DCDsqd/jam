@@ -3,6 +3,9 @@
 
 void godot::SleepInteractor::_bind_methods()
 {
+    ClassDB::bind_method(D_METHOD("set_sound_key"), &SleepInteractor::set_sound_key);
+
+
     ClassDB::bind_method(D_METHOD("set_view_model"), &SleepInteractor::set_view_model);
 }
 
@@ -34,6 +37,11 @@ void godot::SleepInteractor::spawn_game(Entity *p_entity)
 void godot::SleepInteractor::set_view_model(String p_model_path)
 {
     this->model_path = p_model_path;
+}
+
+void godot::SleepInteractor::set_sound_key(String p_sound_key)
+{
+    this->sound_key = p_sound_key;
 }
 
 bool godot::SleepInteractor::_interact(Entity *p_entity)
@@ -71,6 +79,8 @@ bool godot::SleepInteractor::_interact(Entity *p_entity)
 
     spawn_game(p_entity);
 
+    if(sound_key != String())
+        StaticMethods::play_sound(sound_key);
 
     StaticMethods::skip_day();
     

@@ -4,6 +4,8 @@
 
 void godot::ProjectWorkInteractor::_bind_methods()
 {
+    ClassDB::bind_method(D_METHOD("set_sound_key"), &ProjectWorkInteractor::set_sound_key);
+
     ClassDB::bind_method(D_METHOD("set_step_two"), &ProjectWorkInteractor::set_step_two);
     ClassDB::bind_method(D_METHOD("set_step_four"), &ProjectWorkInteractor::set_step_four);
 }
@@ -40,6 +42,11 @@ void godot::ProjectWorkInteractor::set_step_two(String p_step_two)
 void godot::ProjectWorkInteractor::set_step_four(String p_step_four)
 {
     this->step_four = p_step_four;
+}
+
+void godot::ProjectWorkInteractor::set_sound_key(String p_sound_key)
+{
+    this->sound_key = p_sound_key;
 }
 
 void godot::ProjectWorkInteractor::spawn_game(String model_path, Entity *p_entity)
@@ -113,6 +120,9 @@ bool godot::ProjectWorkInteractor::_interact(Entity *p_entity)
 
     controller->put_int("project_progress", step+1);
     UtilityFunctions::print(controller->get_int("project_progress"));
+
+    if(sound_key != String())
+        StaticMethods::play_sound(sound_key);
 
     return true;
     

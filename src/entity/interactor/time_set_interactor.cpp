@@ -51,6 +51,7 @@ bool godot::TimeSetInteractor::_interact(Entity *p_entity)
     int time = controller->get_int("game_time");
     if(alloted_time.find(time) == alloted_time.end()){
         UtilityFunctions::print("TimeSetInteractor: now not alloted time: ", time);
+        StaticMethods::spawn_message(Util::get_value_from_config("word", "bad_time"), 2);
         return false;
     }
 
@@ -58,6 +59,7 @@ bool godot::TimeSetInteractor::_interact(Entity *p_entity)
         UtilityFunctions::print("TimeSetInteractor: lock event: ", i);
         if(controller->has_int(i) && controller->get_int(i) == 1){
             UtilityFunctions::print("TimeSetInteractor: lock event now");
+            StaticMethods::spawn_message(Util::get_value_from_config("word", "bad_event"), 2);
             return false;
         }
     }

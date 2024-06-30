@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcmpqyfcok40g"]
+[gd_scene load_steps=7 format=3 uid="uid://bcmpqyfcok40g"]
 
 [ext_resource type="PackedScene" uid="uid://dvrk3n8arnhni" path="res://objs/tiles/wood_floor.tscn" id="1_e680u"]
 [ext_resource type="PackedScene" uid="uid://c0ia2n1vx22lf" path="res://objs/tiles/single_wall.tscn" id="2_onf6f"]
 [ext_resource type="PackedScene" uid="uid://b1e5i51kci67t" path="res://res/meshs/furniture/bar_stand.gltf" id="3_a84ke"]
 [ext_resource type="Environment" uid="uid://bk0s0ctegvngt" path="res://res/shaders/env/cafe_room.tres" id="4_grev7"]
 [ext_resource type="Texture2D" uid="uid://bjq2tpwid1k53" path="res://res/sprites/furniture/lamp.png" id="4_s6gd8"]
+[ext_resource type="PackedScene" uid="uid://c1poq1oebxyjr" path="res://res/meshs/furniture/door_cafe.gltf" id="6_0nquo"]
 
 [node name="CafeScene" type="Node3D"]
 
@@ -329,3 +330,6 @@ omni_attenuation = 0.287175
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.707107, -0.353553, 0.612372, 0, 6, 0)
 light_energy = 0.0
+
+[node name="blockbench_export3" parent="." instance=ExtResource("6_0nquo")]
+transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -4.93158, -0.0301675, -1.38614)

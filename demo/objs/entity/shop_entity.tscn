@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bb5m2kan06opq"]
+[gd_scene load_steps=6 format=3 uid="uid://bb5m2kan06opq"]
 
 [ext_resource type="Script" path="res://objs/entity/shop_entity.gd" id="1_dei3i"]
 [ext_resource type="PackedScene" uid="uid://cpiujycxp6fv8" path="res://res/meshs/furniture/cash_desk.gltf" id="2_o00j0"]
+[ext_resource type="FontFile" uid="uid://coicw3m5x74rq" path="res://res/styles/main_font.ttf" id="3_42d5t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0ii2a"]
 size = Vector3(1.45508, 0.936646, 1.01367)
@@ -25,3 +26,23 @@ shape = SubResource("CylinderShape3D_810xq")
 
 [node name="blockbench_export" parent="." instance=ExtResource("2_o00j0")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.265015, -0.367572, 0)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0565034, 0.45389, -0.434758)
+texture_filter = 0
+modulate = Color(0.752941, 0, 0.270588, 1)
+text = "FOR
+SALE"
+font = ExtResource("3_42d5t")
+font_size = 22
+outline_size = 0
+line_spacing = -8.47
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Label3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98023e-08, -0.120689, 0.189847)
+light_color = Color(0.964706, 0, 0.356863, 1)
+light_energy = 1.5
+light_volumetric_fog_energy = 4.0
+shadow_enabled = true
+omni_range = 1.2323
+omni_attenuation = 2.0

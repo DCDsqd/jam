@@ -22,12 +22,16 @@ protected:
 
     String step_two;
     String step_four;
+        
+    String sound_key = String();
 
     bool is_avaible(GameController *controller);
 
 public:
     void set_step_two(String p_step_two);
     void set_step_four(String p_step_four);
+
+    void set_sound_key(String p_sound_key);
 
     void spawn_game(String model_path, Entity *p_entity);
 

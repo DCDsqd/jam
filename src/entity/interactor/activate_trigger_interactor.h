@@ -18,8 +18,11 @@ protected:
     static void _bind_methods();
 
     String trigger_name;
+    String sound_key = String();
 
 public:
+    void set_sound_key(String p_sound_key);
+
     void set_trigger(String p_trigger_name);
 
 	bool _interact(Entity *p_entity) override;

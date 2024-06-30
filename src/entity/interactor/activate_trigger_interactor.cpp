@@ -1,9 +1,16 @@
 #include "activate_trigger_interactor.h"
 #include "godot_cpp/variant/utility_functions.hpp"
+#include "util/static_methods.hpp"
 
 void godot::ActivateTriggerInteractor::_bind_methods()
 {
     ClassDB::bind_method(D_METHOD("set_trigger"), &ActivateTriggerInteractor::set_trigger);
+    ClassDB::bind_method(D_METHOD("set_sound_key"), &ActivateTriggerInteractor::set_sound_key);
+}
+
+void godot::ActivateTriggerInteractor::set_sound_key(String p_sound_key)
+{
+    this->sound_key = p_sound_key;
 }
 
 void godot::ActivateTriggerInteractor::set_trigger(String p_trigger_name)
@@ -27,6 +34,9 @@ bool godot::ActivateTriggerInteractor::_interact(Entity *p_entity)
     }
 
     trigger->activate();
+
+    if(this->sound_key != String())
+        StaticMethods::play_sound(sound_key);
 
     return true;
 }

@@ -4,6 +4,7 @@ extends MultiSelectorModel
 func _ready():
 	var cafe_interactor : ActivateTriggerInteractor = ActivateTriggerInteractor.new()
 	cafe_interactor.set_trigger("go_to_cafe")
+	cafe_interactor.set_sound_key("sound_work");
 	
 	var interactor1 : TimeSetInteractor = TimeSetInteractor.new();
 	interactor1.add_alloted_time(0)
@@ -12,6 +13,7 @@ func _ready():
 	
 	var friends_meet : ViewModelInteractor = ViewModelInteractor.new()
 	friends_meet.set_view_model("res://objs/mini_games/cleaning/clean_skip.tscn")
+	friends_meet.set_sound_key("sound_friends")
 	
 	var interactor2 : TimeSetInteractor = TimeSetInteractor.new();
 	interactor2.add_alloted_time(0)
@@ -21,6 +23,7 @@ func _ready():
 	
 	var shop_interactor : ActivateTriggerInteractor = ActivateTriggerInteractor.new()
 	shop_interactor.set_trigger("go_to_shop")
+	shop_interactor.set_sound_key("sound_shop")
 	
 	var interactor3 : TimeSetInteractor = TimeSetInteractor.new();
 	interactor3.add_alloted_time(1)

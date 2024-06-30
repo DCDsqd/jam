@@ -7,6 +7,9 @@ void godot::CaffeStartGameInteractor::_bind_methods()
 
 bool godot::CaffeStartGameInteractor::_interact(Entity *p_entity)
 {
+    if(activate)
+        return false;
+
     GameController *game_controller = EternityData::get_singleton()->get_controller();
     if(game_controller == nullptr){
         UtilityFunctions::print("CaffeStartGameInteractor: controller is null");
@@ -30,6 +33,7 @@ bool godot::CaffeStartGameInteractor::_interact(Entity *p_entity)
     }
 
     controller->start_game(p_entity);
+    activate = true;
     return true;
 }
 

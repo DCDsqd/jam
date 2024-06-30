@@ -67,7 +67,7 @@ light_energy = 0.1
 shadow_enabled = true
 
 [node name="AppsDoor" parent="." instance=ExtResource("7_05c6s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97074, 0.472896, -0.0149546)
+transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -4.97331, 0.000577688, -0.0149546)
 
 [node name="blockbench_export2" parent="." instance=ExtResource("9_4nul4")]
 transform = Transform3D(-0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, -0.980795, 0.0996852, -0.641129)

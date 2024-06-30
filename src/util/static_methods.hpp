@@ -14,6 +14,7 @@
 #include "godot_cpp/classes/json.hpp"
 #include "variants/hero_stats.hpp"
 #include "variants/task_pull.hpp"
+#include "view_models/message_model.h"
 
 namespace godot{
 
@@ -209,20 +210,20 @@ public:
 
         Node *node = Util::spawn_node(model_path);
         if(node == nullptr){
-            UtilityFunctions::print("ViewModelInteractor: node is not created");
+            UtilityFunctions::print("StaticMethods: node is not created");
             return;
         }
 
         ViewModel *model = Object::cast_to<ViewModel>(node);
         if(!model){
-            UtilityFunctions::print("ViewModelInteractor: node is not a viewModel");
+            UtilityFunctions::print("StaticMethods: node is not a viewModel");
             return;
         }
 
         Hud* hud = EternityData::get_singleton()->get_hud();
 
         if(hud == nullptr){
-            UtilityFunctions::print("ViewModelInteractor: hud is null");
+            UtilityFunctions::print("StaticMethods: hud is null");
             return;
         }
 
@@ -247,6 +248,40 @@ public:
         // UtilityFunctions::print("HairCut: ", UtilityFunctions::var_to_str(controller->get_int(TaskPull::HairCut())));
     }
     
+
+    static void spawn_message(String message, int type){
+        Hud* hud = EternityData::get_singleton()->get_hud();
+
+        if(hud == nullptr){
+            UtilityFunctions::print("StaticMethods: hud is null");
+            return;
+        }
+
+        String path = Util::get_value_from_config("util", "message_model_impl");
+        if(path == String()){
+            UtilityFunctions::print("StaticMethods: not found value by key: message_model_impl");
+            return;
+        }
+
+        Node* node = Util::spawn_node(path);
+        if(node == nullptr){
+            UtilityFunctions::print("StaticMethods: unable to spawn node");
+            return;
+        }
+
+        MessageModel *model = Object::cast_to<MessageModel>(node);
+        if(model == nullptr){
+            UtilityFunctions::print("StaticMethods: not a MessageModel");
+            node->queue_free();
+            return;
+        }
+
+        hud->add_child(model);
+        model->open_window(nullptr, nullptr);
+        model->set_message(message, type);
+
+        
+    }
 };
 
 }
