@@ -1,4 +1,8 @@
 {
 	"selector_button": "res://util/param_button_impl.tscn",
-	"bubble_spr": "res://util/bubble_spr.tscn"
+	"bubble_spr": "res://util/bubble_spr.tscn",
+	"result_view": "res://objs/view_models/result_caffe.tscn",
+	
+	"correct_cloud": "res://res/sprites/items/complite.png",
+	"bad_cloud": "res://res/sprites/items/none.png"
 }

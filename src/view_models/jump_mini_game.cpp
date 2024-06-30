@@ -3,20 +3,27 @@
 
 void godot::JumpMiniGame::calculate_score()
 {
+
+    float result = start_value + score*modifier;
+
     EntityData* data = player->get_data();
 
-    if(!data->has_float(HeroStats::chill())){
-        data->put_float(HeroStats::chill(), score);
+    if(!data->has_float(param)){
+        data->put_float(param, result);
         return;
     }
 
-    float chill = data->get_float(HeroStats::chill());
-    data->put_float(HeroStats::chill(), chill + score);
+    float tmp = data->get_float(param);
+    data->put_float(param, tmp + result);
     
 }
 
 void godot::JumpMiniGame::_bind_methods()
 {
+    ClassDB::bind_method(D_METHOD("set_param"), &JumpMiniGame::set_param);
+    ClassDB::bind_method(D_METHOD("set_modifier"), &JumpMiniGame::set_modifier);
+    ClassDB::bind_method(D_METHOD("set_start_value"), &JumpMiniGame::set_start_value);
+
     ClassDB::bind_method(D_METHOD("get_score"), &JumpMiniGame::get_score);
     ClassDB::bind_method(D_METHOD("get_health"), &JumpMiniGame::get_health);
     ClassDB::bind_method(D_METHOD("minus_hp"), &JumpMiniGame::minus_hp);
@@ -59,6 +66,21 @@ void godot::JumpMiniGame::_close_window()
 void godot::JumpMiniGame::_int_process()
 {
 
+}
+
+void godot::JumpMiniGame::set_param(String p_param)
+{
+    this->param = p_param;
+}
+
+void godot::JumpMiniGame::set_modifier(float p_modifier)
+{
+    this->modifier = p_modifier;
+}
+
+void godot::JumpMiniGame::set_start_value(float p_start_value)
+{
+    this->start_value = p_start_value;
 }
 
 int godot::JumpMiniGame::get_score()

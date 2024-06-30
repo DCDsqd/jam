@@ -42,21 +42,7 @@ void godot::HeroBehaivor::calculate_stats()
 
     UtilityFunctions::print("HeroBehaivor: calculate new values");
 
-    float prod = 0.0f;
-    if(data->has_float(HeroStats::chill())){
-        float chill = data->get_float(HeroStats::chill());
-        UtilityFunctions::print("HeroBehaivor: chill value: " + UtilityFunctions::var_to_str(chill));
-        if(chill > 8.0f){
-            prod += 0.25f;
-        }
-        else{
-            prod -= 0.25f;
-        }
-    }
-
-    data->put_float(HeroStats::productive(), prod);
-    UtilityFunctions::print("HeroBehaivor: prod value: " + UtilityFunctions::var_to_str(prod));
-
+    
     
 }
 

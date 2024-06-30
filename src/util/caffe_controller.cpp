@@ -1,5 +1,6 @@
 #include "caffe_controller.h"
 #include "godot_cpp/variant/utility_functions.hpp"
+#include "variants/hero_stats.hpp"
 #include "util/static_methods.hpp"
 
 
@@ -173,6 +174,7 @@ void godot::CaffeController::show_orders()
             BubbleSpr *bubble = node->cast_to<BubbleSpr>(node);
             add_child(bubble);
             bubble->set_position(order_node->get_pos() + Vector3(0.0f, 1.5f, 0.0f));
+            bubble->set_scale(Vector3(2.0f, 2.0f, 2.0f));
             bubble->set_sprite(order_node->get_order_name());
         }
 
@@ -201,6 +203,7 @@ void godot::CaffeController::show_clients()
             BubbleSpr *bubble = node->cast_to<BubbleSpr>(node);
             add_child(bubble);
             bubble->set_position(client_node->get_pos() + Vector3(0.0f, 1.5f, 0.0f));
+            bubble->set_scale(Vector3(2.0f, 2.0f, 2.0f));
             bubble->set_sprite(client_node->get_order_name());
         }
 
@@ -218,15 +221,127 @@ void godot::CaffeController::show_player()
     UtilityFunctions::print("CaffeController: camera_hero_trigger so bad");
 }
 
+bool godot::CaffeController::check_player()
+{
+    if(player == nullptr){
+        UtilityFunctions::print("CaffeController: player is null");
+        return false;
+    }
+
+    if(player->get_data() == nullptr){
+        UtilityFunctions::print("CaffeController: player data is null");
+        return false;
+    }
+
+    EntityData *data = player->get_data();
+
+    if(!data->has_float(HeroStats::effective())){
+        UtilityFunctions::print("CaffeController: effective is null");
+        return false;
+    }
+
+    if(!data->has_float(HeroStats::productive())){
+        UtilityFunctions::print("CaffeController: productive is null");
+        return false;
+    }
+
+    if(!data->has_float(HeroStats::money())){
+        UtilityFunctions::print("CaffeController: money is null");
+        return false;
+    }
+
+    return true;
+}
+
+void godot::CaffeController::calculate_score()
+{
+    
+    if(!check_player()){
+        return;
+    }
+
+    String info = "";
+
+    float start_money = 500.0f;
+    float effective = player->get_data()->get_float(HeroStats::effective());
+    float time_bonus = effective*30.0f - timer;
+    if(time_bonus < 0.5f){
+        time_bonus = 0.5f;
+    }
+
+    float productive = player->get_data()->get_float(HeroStats::productive());
+
+    float result = start_money * (score/10 + time_bonus/10)*productive;
+
+    info += Util::get_value_from_config("word", "result_caffe_score") + 
+        UtilityFunctions::var_to_str(score) + "\n";
+
+    info += Util::get_value_from_config("word", "result_caffe_time") + 
+        UtilityFunctions::var_to_str(timer) + "\n";
+        
+    info += Util::get_value_from_config("word", "result_caffe_effective_bonus")  + 
+        UtilityFunctions::var_to_str(effective) + "\n";
+
+    info += Util::get_value_from_config("word", "result_caffe_time_bonus") + "5 * " +
+        UtilityFunctions::var_to_str(effective) + " - " + UtilityFunctions::var_to_str(timer) + "\n";
+
+    info += " = " + UtilityFunctions::var_to_str(time_bonus) + "\n";
+
+    info += Util::get_value_from_config("word", "result_caffe_productive_bonus")  + 
+        UtilityFunctions::var_to_str(productive);
+
+    float money = player->get_data()->get_float(HeroStats::money());
+    player->get_data()->put_float(HeroStats::money(), money + result);
+
+    float tmp = player->get_data()->get_float(HeroStats::happy());
+    player->get_data()->put_float(HeroStats::happy(), tmp - 0.25);
+
+    show_result(info, "= " + UtilityFunctions::var_to_str(result));
+}
+
+void godot::CaffeController::show_result(String info, String result)
+{
+    String path = Util::get_value_from_config("util", "result_view");
+    if(path == String()){
+        UtilityFunctions::print("CaffeController: config not found: result_view");
+        return;
+    }
+
+    Node *node = Util::spawn_node(path);
+    if(node == nullptr){
+        UtilityFunctions::print("CaffeController: node is not created");
+        return;
+    }
+
+    CaffeResult *model = Object::cast_to<CaffeResult>(node);
+    if(!model){
+        UtilityFunctions::print("CaffeController: node is not a CaffeResult");
+        return;
+    }
+
+    Hud* hud = EternityData::get_singleton()->get_hud();
+    if(hud == nullptr){
+        UtilityFunctions::print("ViewModelInteractor: hud is null");
+        return;
+    }
+    hud->add_child(model);
+    model->open_window(nullptr, player);
+
+    model->set_main_info(info);
+    model->set_result_info(result);
+
+}
+
 void godot::CaffeController::plus_score(int p_score)
 {
+    UtilityFunctions::print("CaffeController: change score on ", p_score);
     this->score += p_score;
 }
 
 void godot::CaffeController::add_progress()
 {
     this->progress++;
-    UtilityFunctions::print("CaffeController: your progress", progress);
+    UtilityFunctions::print("CaffeController: your progress ", progress);
     if(this->orders.size() <= progress){
         end_game();
     }
@@ -234,9 +349,8 @@ void godot::CaffeController::add_progress()
 
 void godot::CaffeController::end_game()
 {
-    UtilityFunctions::print("CaffeController: you win!!");
-    UtilityFunctions::print("CaffeController: your score", score);
     GAME_STARTED = false;
+    calculate_score();
 
     if(has_node(end_trigger) && get_node<Trigger3D>(end_trigger)){
         StaticMethods::add_time();
@@ -287,6 +401,8 @@ void godot::CaffeController::start_game(Entity *p_player)
 
         return;
     }
+
+    this->player = p_player;
 
     RandomNumberGenerator *rnd = new RandomNumberGenerator();
 

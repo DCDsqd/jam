@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://d12pmgkapb58a"]
+
+[ext_resource type="Theme" uid="uid://d1au4r7q42nnx" path="res://res/styles/main_theme.tres" id="1_xv6mv"]
+[ext_resource type="Texture2D" uid="uid://bhm1tbmt2g1dl" path="res://res/sprites/items/morning.png" id="2_culsd"]
+[ext_resource type="Texture2D" uid="uid://d04hd8cfmdbdi" path="res://res/sprites/items/afternoon.png" id="3_tvks5"]
+[ext_resource type="Texture2D" uid="uid://dwld6lvq5nh5w" path="res://res/sprites/items/evening.png" id="4_gg34j"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ko2ik"]
+frames = 3
+pause = true
+frame_0/texture = ExtResource("2_culsd")
+frame_1/texture = ExtResource("3_tvks5")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("4_gg34j")
+frame_2/duration = 1.0
+
+[node name="Hud" type="Hud"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+status_bar_path = NodePath("SimpleStatusBar")
+
+[node name="SimpleStatusBar" type="SimpleStatusBar" parent="."]
+time_path = NodePath("clock")
+day_path = NodePath("day")
+layout_mode = 1
+offset_right = 1101.0
+offset_bottom = 373.0
+
+[node name="day" type="Label" parent="SimpleStatusBar"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 212.0
+offset_right = 399.0
+offset_bottom = 281.0
+rotation = -0.112685
+theme = ExtResource("1_xv6mv")
+theme_override_font_sizes/font_size = 60
+text = "Понедельник"
+
+[node name="clock" type="TextureRect" parent="SimpleStatusBar"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 25.0
+offset_right = 202.0
+offset_bottom = 188.0
+texture = SubResource("AnimatedTexture_ko2ik")

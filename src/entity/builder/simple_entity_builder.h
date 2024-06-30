@@ -24,7 +24,7 @@ public:
     void set_velocity(float p_velocity);
     void set_friction(float p_friction);
 
-    void set_stats(float chill);
+    void set_stats();
 
     void set_move_sound_modifier(float p_step_sound_modifier);
 

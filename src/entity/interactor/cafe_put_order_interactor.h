@@ -23,6 +23,8 @@ protected:
     CaffeController *controller = nullptr;
     Vector3 pos;
 
+    void spawn_cloud(String name);
+
 public:
     void set_controller(CaffeController *p_controller);
     void set_order_name(String p_order_name);

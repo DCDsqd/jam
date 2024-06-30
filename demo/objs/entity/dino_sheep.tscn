@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2qm6uiagsgni"]
+
+[ext_resource type="Script" path="res://objs/entity/dino.gd" id="1_emmn1"]
+[ext_resource type="Texture2D" uid="uid://gs8buq1guwig" path="res://res/sprites/entity/google_dino.png" id="2_3udpj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g7850"]
+size = Vector3(0.800535, 0.848755, 1)
+
+[node name="Dino" type="MovingEntity"]
+collision_mask = 9
+script = ExtResource("1_emmn1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0400381, 0, 0)
+shape = SubResource("BoxShape3D_g7850")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("2_3udpj")

@@ -1,5 +1,9 @@
-[gd_scene format=3 uid="uid://keb1j8m6r7qw"]
+[gd_scene load_steps=2 format=3 uid="uid://keb1j8m6r7qw"]
+
+[ext_resource type="Theme" uid="uid://d1au4r7q42nnx" path="res://res/styles/main_theme.tres" id="1_7yitr"]
 
 [node name="ParamButtonImpl" type="ParamButton"]
-offset_right = 152.0
-offset_bottom = 53.0
+offset_right = 423.0
+offset_bottom = 110.0
+theme = ExtResource("1_7yitr")
+text = "test"

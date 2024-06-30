@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0ra3n5slsa30"]
+
+[ext_resource type="Script" path="res://objs/entity/mop.gd" id="1_lvn4c"]
+[ext_resource type="Texture2D" uid="uid://b415c2tfyeyns" path="res://res/sprites/items/mop.png" id="2_ptwao"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ii2a"]
+size = Vector3(0.631897, 1, 0.368103)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_810xq"]
+height = 0.92976
+radius = 0.790757
+
+[node name="AppsDoor" type="ModelEntity"]
+interact_path = NodePath("Area3D")
+script = ExtResource("1_lvn4c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0062561, 0, -0.328025)
+shape = SubResource("BoxShape3D_0ii2a")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_810xq")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1.93185, 0.517638, 0, -0.517638, 1.93185, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("2_ptwao")

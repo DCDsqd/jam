@@ -91,7 +91,7 @@ void godot::PlatformerMover3D::on_floor_move(Vector3 velocity, const Vector3 &mo
 
 	if(ground_velocity.abs().length() > params->velocity){
 		if(step_sound_cd <= 0.0f){
-			get_entity()->animator_play_sound("step");
+			//get_entity()->animator_play_sound("step");
 			this->step_sound_cd = (1/(ground_velocity.abs().length()+1))*params->step_sound_modifier;
 		}
 

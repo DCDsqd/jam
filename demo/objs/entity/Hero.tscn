@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://dffqsmchhcsd2" path="res://res/sprites/entity/hero.tres" id="1_yxjad"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vhqjk"]
-size = Vector3(0.390656, 0.675569, 0.330566)
+size = Vector3(0.390656, 0.675569, 0.136627)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_prn6j"]
 height = 0.435957

@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3l0dcmkamxef"]
+[gd_scene load_steps=11 format=3 uid="uid://b3l0dcmkamxef"]
 
 [ext_resource type="Environment" uid="uid://4xfll0fcwfc8" path="res://res/shaders/env/dino_env.tres" id="1_p00hh"]
+[ext_resource type="Script" path="res://objs/mini_games/jump_game/dino_game.gd" id="1_yqe8b"]
 [ext_resource type="PackedScene" uid="uid://cgdydi7j08yo4" path="res://objs/entity/dino.tscn" id="2_1jge6"]
 [ext_resource type="Script" path="res://objs/mini_games/jump_game/google_cactus.gd" id="3_htkp0"]
 [ext_resource type="Texture2D" uid="uid://dfghfxigsi3hv" path="res://res/sprites/items/google_cactus.png" id="3_q7drj"]
@@ -18,6 +19,7 @@ size = Vector3(1, 1, 4)
 size = Vector3(0.46669, 0.915955, 0.49353)
 
 [node name="JumpMiniGame" type="JumpMiniGame"]
+script = ExtResource("1_yqe8b")
 
 [node name="Control" type="Control" parent="."]
 clip_contents = true

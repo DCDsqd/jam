@@ -27,6 +27,7 @@
 #include "view_models/jump_mini_game.h"
 #include "view_models/multi_selector_model.h"
 #include "view_models/shading_view_model.h"
+#include "view_models/caffe_result.h"
 
 #include "triggers/trigger_next_room.h"
 #include "triggers/trigger_teleport.h"
@@ -35,7 +36,7 @@
 
 #include "musical_controller/simple_musical_controller.h"
 
-
+#include "hud/simple_status_bar.h"
 
 #include "util/param_button.h"
 #include "util/caffe_controller.h"
@@ -73,6 +74,8 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<SimpleGameMenu>();
 	ClassDB::register_class<StatMenu>();
 
+	ClassDB::register_class<SimpleStatusBar>();
+
 	ClassDB::register_class<TriggerNextRoom>();
 	ClassDB::register_class<TriggerTeleport>();
 	ClassDB::register_class<TriggerCameraTarget>();
@@ -81,6 +84,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<MultiSelectorModel>();
 	ClassDB::register_class<JumpMiniGame>();
 	ClassDB::register_class<ShadingViewModel>();
+	ClassDB::register_class<CaffeResult>();
 
 	ClassDB::register_class<SimpleMusicalController>();
 

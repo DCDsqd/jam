@@ -1,0 +1,13 @@
+{
+	"result_caffe_score" : "Счет: ",
+	"result_caffe_time" : "Время: ",
+	"result_caffe_effective_bonus" : "Бонус эффективности: ",
+	"result_caffe_time_bonus" : "Бонус за время: ",
+	"result_caffe_productive_bonus" : "Бонус продуктивности: ",
+	
+	"day_0" : "понедельник",
+	"day_1" : "вторник",
+	"day_2" : "среда",
+	"day_3" : "четверг",
+	"day_4" : "пятница",
+}

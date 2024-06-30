@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://brqysxbuxafx8"]
+[gd_scene load_steps=12 format=3 uid="uid://brqysxbuxafx8"]
 
+[ext_resource type="Script" path="res://objs/mini_games/jump_game/SleepGame.gd" id="1_s2xhc"]
 [ext_resource type="Environment" uid="uid://bj88yy6obtpiv" path="res://res/shaders/env/sleep_game.tres" id="1_ypeb7"]
 [ext_resource type="PackedScene" uid="uid://cgdydi7j08yo4" path="res://objs/entity/dino.tscn" id="2_hgues"]
 [ext_resource type="Script" path="res://objs/mini_games/jump_game/google_cactus.gd" id="3_agsmv"]
@@ -21,6 +22,7 @@ size = Vector3(1, 1, 4)
 size = Vector3(0.46669, 0.915955, 0.49353)
 
 [node name="JumpMiniGame" type="JumpMiniGame"]
+script = ExtResource("1_s2xhc")
 
 [node name="Control" type="Control" parent="."]
 clip_contents = true

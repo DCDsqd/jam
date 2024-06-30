@@ -22,6 +22,10 @@ private:
 
     Entity* player = nullptr;
 
+    String param = String();
+    float modifier = 0.0f;
+    float start_value = 0.0f;
+
     void calculate_score();
 
 protected:
@@ -30,6 +34,10 @@ public:
 	void _open_window(Entity *interaction, Entity *interactor) override;
 	void _close_window() override;
 	void _int_process() override;
+
+    void set_param(String p_param);
+    void set_modifier(float p_modifier);
+    void set_start_value(float p_start_value);
 
     int get_score();
     int get_health();

@@ -92,7 +92,7 @@ void godot::SimpleEntityBuilder::set_friction(float p_friction)
     get_data()->put_float(EntityParams::FRICTION(), p_friction);
 }
 
-void godot::SimpleEntityBuilder::set_stats(float chill)
+void godot::SimpleEntityBuilder::set_stats()
 {
     if(get_data() == nullptr){
         UtilityFunctions::print("SimpleEntityBuilder: data is null");
@@ -100,7 +100,14 @@ void godot::SimpleEntityBuilder::set_stats(float chill)
     }
     get_data()->put_string(HeroStats::cafe_order(), "");
 
-    get_data()->put_float(HeroStats::chill(), chill);
+    get_data()->put_float(HeroStats::money(), 1.0);
+    get_data()->put_float(HeroStats::productive(), 1.0);
+    get_data()->put_float(HeroStats::effective(), 1.0);
+    get_data()->put_float(HeroStats::dream(), 1.0);
+
+    get_data()->put_float(HeroStats::happy(), 0.0);
+    get_data()->put_float(HeroStats::sleep(), 0.0);
+    get_data()->put_float(HeroStats::hunger(), 0.0);
 }
 
 void godot::SimpleEntityBuilder::set_move_sound_modifier(float p_step_sound_modifier)

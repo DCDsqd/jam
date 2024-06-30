@@ -7,6 +7,25 @@ void godot::CafePutOrderInteractor::_bind_methods()
 {
 }
 
+void godot::CafePutOrderInteractor::spawn_cloud(String name)
+{
+    String value = Util::get_value_from_config("util", "bubble_spr");
+    if(value == String())
+        return;
+
+    Node *node = Util::spawn_node(value);
+    if(!node->cast_to<BubbleSpr>(node)){
+        UtilityFunctions::print("CaffeController: not a bubble_spr");
+        return;
+    }
+        
+    BubbleSpr *bubble = node->cast_to<BubbleSpr>(node);
+    controller->add_child(bubble);
+    bubble->set_position(get_pos() + Vector3(0.0f, 1.5f, 0.0f));
+    bubble->set_scale(Vector3(2.0f, 2.0f, 2.0f));
+    bubble->set_sprite(name);
+}
+
 void godot::CafePutOrderInteractor::set_controller(CaffeController *p_controller)
 {
     this->controller = p_controller;
@@ -53,13 +72,15 @@ bool godot::CafePutOrderInteractor::_interact(Entity *p_entity)
 
     if(data->get_string(HeroStats::cafe_order()) == order_name){
         UtilityFunctions::print("CafePutOrderInteractor: oreder has get");
+        spawn_cloud(Util::get_value_from_config("util", "correct_cloud"));
         data->put_string(HeroStats::cafe_order(), "");
         controller->add_progress();
         return true;
     }
     
     UtilityFunctions::print("CafePutOrderInteractor: order is incorect");
-    controller->plus_score(-0.5f);
+    spawn_cloud(Util::get_value_from_config("util", "bad_cloud"));
+    controller->plus_score(-1);
     return false;
 }
 

@@ -21,7 +21,7 @@ func _ready():
 	builder.set_coyot_timer(0)
 	builder.set_jump_save_timer(0)
 	
-	builder.set_stats(1.0)
+	builder.set_stats()
 	
 	#set_entity(Entity.new())
 	set_entity(builder.get_entity())

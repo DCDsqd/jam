@@ -10,6 +10,7 @@
 #include <godot_cpp/classes/random_number_generator.hpp>
 #include <godot_cpp/classes/trigger3d.hpp>
 #include "util/bubble_spr.h"
+#include "view_models/caffe_result.h"
 
 #include "entity/interactor/cafe_get_order_interactor.h"
 #include "entity/interactor/cafe_put_order_interactor.h"
@@ -49,6 +50,10 @@ private:
     void show_orders();
     void show_clients();
     void show_player();
+
+    bool check_player();
+    void calculate_score();
+    void show_result(String info, String result);
 
 protected:
 	static void _bind_methods();
