@@ -44,10 +44,12 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = -374.0
-offset_top = -247.0
-offset_right = 366.0
-offset_bottom = -129.0
+offset_left = -401.0
+offset_top = -277.0
+offset_right = 414.0
+offset_bottom = -103.0
 theme_override_colors/font_color = Color(0.215686, 0.0627451, 0.141176, 1)
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 40
 text = "safasdf"
+horizontal_alignment = 1
+vertical_alignment = 1

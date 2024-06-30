@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ub6cwiv8dghw"]
+[gd_scene load_steps=16 format=3 uid="uid://ub6cwiv8dghw"]
 
 [ext_resource type="PackedScene" uid="uid://c6j78b17um1nr" path="res://objs/tiles/shop_floor.tscn" id="1_jcxma"]
 [ext_resource type="PackedScene" uid="uid://cuqqwu3uhcr2o" path="res://objs/tiles/shop_wall.tscn" id="2_ljkh4"]
@@ -7,6 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://bjq2tpwid1k53" path="res://res/sprites/furniture/lamp.png" id="5_wnhfx"]
 [ext_resource type="PackedScene" uid="uid://cu5apw2kcpjr4" path="res://res/meshs/furniture/Shelf_shkaf.gltf" id="6_kijf6"]
 [ext_resource type="PackedScene" uid="uid://c3jgd7ofgha44" path="res://res/meshs/furniture/racking.gltf" id="7_yron1"]
+[ext_resource type="Texture2D" uid="uid://c6ho0ebyhik4g" path="res://res/sprites/items/Nutalla.png" id="8_uvuw4"]
+[ext_resource type="Texture2D" uid="uid://dcq25kxyyrj16" path="res://res/sprites/items/coffemagazine.png" id="9_p8oa1"]
+[ext_resource type="Texture2D" uid="uid://i7awdifycxr0" path="res://res/sprites/items/Bread.png" id="10_eql44"]
+[ext_resource type="Texture2D" uid="uid://bhflpvt0vqmoj" path="res://res/sprites/items/Flop.png" id="10_te65g"]
+[ext_resource type="Texture2D" uid="uid://bsxby83ob40w3" path="res://res/sprites/items/sweetroll.png" id="11_odm3m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y65fp"]
 sky_top_color = Color(0.690196, 0.164706, 0.713726, 1)
@@ -325,5 +330,123 @@ transform = Transform3D(0.747304, 0, -0.285547, 0, 0.8, 0, 0.285547, 0, 0.747304
 [node name="blockbench_export2" parent="." instance=ExtResource("7_yron1")]
 transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -1.36333, 0.000363998, -1.75798)
 
+[node name="Sprite3D8" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(-1.20643e-07, 0.714341, -2.66596, -3.80648e-14, 2.66596, 0.714341, 2.76, 3.12248e-08, -1.16533e-07, 0.0430326, 2.48961, -0.443468)
+texture_filter = 0
+texture = ExtResource("8_uvuw4")
+
+[node name="Sprite3D9" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(-1.20643e-07, 0.714341, -2.66596, -3.80648e-14, 2.66596, 0.714341, 2.76, 3.12248e-08, -1.16533e-07, 0.0430326, 2.48961, 0.681358)
+texture_filter = 0
+texture = ExtResource("8_uvuw4")
+
+[node name="Sprite3D10" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(0.0760331, 0.325476, -1.52889, -0.0434583, 1.53055, 0.323667, 1.56255, 0.0267308, 0.0833974, 0.0430326, 1.7042, -0.581109)
+texture_filter = 0
+texture = ExtResource("8_uvuw4")
+
+[node name="Sprite3D14" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(-1.04033e-07, 0.615989, -2.2989, -3.04518e-14, 2.2989, 0.615989, 2.38, 2.69258e-08, -1.00488e-07, 0.0430326, 1.13458, -0.581109)
+texture_filter = 0
+texture = ExtResource("9_p8oa1")
+
+[node name="Sprite3D15" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(-1.04033e-07, 0.615989, -2.2989, -3.04518e-14, 2.2989, 0.615989, 2.38, 2.69258e-08, -1.00488e-07, 0.0782697, 1.13458, -0.0212355)
+texture_filter = 0
+texture = ExtResource("9_p8oa1")
+
+[node name="Sprite3D16" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(-1.04033e-07, 0.615989, -2.2989, -3.04518e-14, 2.2989, 0.615989, 2.38, 2.69258e-08, -1.00488e-07, 0.174303, 1.13458, 0.480087)
+texture_filter = 0
+texture = ExtResource("9_p8oa1")
+
+[node name="Sprite3D17" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(-1.04033e-07, 0.615989, -2.2989, -3.04518e-14, 2.2989, 0.615989, 2.38, 2.69258e-08, -1.00488e-07, -0.0628407, 1.13458, 0.870545)
+texture_filter = 0
+texture = ExtResource("9_p8oa1")
+
+[node name="Sprite3D11" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(0.0760331, 0.325476, -1.52889, -0.0434583, 1.53055, 0.323667, 1.56255, 0.0267308, 0.0833974, -0.0158231, 1.7042, -0.0876358)
+texture_filter = 0
+texture = ExtResource("8_uvuw4")
+
+[node name="Sprite3D12" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(0.0760331, 0.325476, -1.52889, -0.0434583, 1.53055, 0.323667, 1.56255, 0.0267308, 0.0833974, 0.116445, 1.7042, 0.404669)
+texture_filter = 0
+texture = ExtResource("8_uvuw4")
+
+[node name="Sprite3D13" type="Sprite3D" parent="blockbench_export2"]
+transform = Transform3D(0.0760331, 0.325476, -1.52889, -0.0434583, 1.53055, 0.323667, 1.56255, 0.0267308, 0.0833974, 0.0430326, 1.7042, 0.87435)
+texture_filter = 0
+texture = ExtResource("8_uvuw4")
+
+[node name="blockbench_export6" parent="." instance=ExtResource("7_yron1")]
+transform = Transform3D(0.15537, 0, 0.68254, 0, 0.7, 0, -0.68254, 0, 0.15537, 3.13839, 0.000363998, -1.59303)
+
+[node name="Sprite3D17" type="Sprite3D" parent="blockbench_export6"]
+transform = Transform3D(-7.71506e-08, 0.456816, -1.70486, -2.2583e-14, 1.70486, 0.456816, 1.765, 1.99681e-08, -7.45218e-08, -0.0628407, 1.13458, 0.870545)
+texture_filter = 0
+texture = ExtResource("10_te65g")
+
+[node name="Sprite3D18" type="Sprite3D" parent="blockbench_export6"]
+transform = Transform3D(2.98023e-08, 0.456816, -1.70486, -2.2583e-14, 1.70486, 0.456816, 1.765, 0, -2.98023e-08, 0.0205963, 1.13458, 0.397337)
+texture_filter = 0
+texture = ExtResource("10_te65g")
+
+[node name="Sprite3D19" type="Sprite3D" parent="blockbench_export6"]
+transform = Transform3D(1.49012e-07, 0.456816, -1.70486, -2.2583e-14, 1.70486, 0.456816, 1.765, 0, -2.98023e-08, -0.0775955, 1.13458, -0.154726)
+texture_filter = 0
+texture = ExtResource("10_te65g")
+
+[node name="Sprite3D20" type="Sprite3D" parent="blockbench_export6"]
+transform = Transform3D(1.49012e-07, 0.456816, -1.70486, -2.2583e-14, 1.70486, 0.456816, 1.765, 0, -2.98023e-08, 0.025275, 1.13458, -0.560306)
+texture_filter = 0
+texture = ExtResource("10_te65g")
+
+[node name="Sprite3D21" type="Sprite3D" parent="blockbench_export6"]
+transform = Transform3D(1.49012e-07, 0.456816, -1.70486, -2.2583e-14, 1.70486, 0.456816, 1.765, 0, -2.98023e-08, 0.025275, 1.75503, -0.560306)
+texture_filter = 0
+texture = ExtResource("10_te65g")
+
+[node name="Sprite3D22" type="Sprite3D" parent="blockbench_export6"]
+transform = Transform3D(1.49012e-07, 0.456816, -1.70486, -2.2583e-14, 1.70486, 0.456816, 1.765, 0, -2.98023e-08, 0.101656, 1.75503, 0.754265)
+texture_filter = 0
+texture = ExtResource("10_te65g")
+
+[node name="Sprite3D23" type="Sprite3D" parent="blockbench_export6"]
+transform = Transform3D(1.49012e-07, 0.456816, -1.70486, -2.2583e-14, 1.70486, 0.456816, 1.765, 0, -2.98023e-08, 0.141509, 1.75503, 0.153571)
+texture_filter = 0
+texture = ExtResource("10_te65g")
+
 [node name="blockbench_export5" parent="." instance=ExtResource("7_yron1")]
 transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -3.79555, 0.000363998, -1.75798)
+
+[node name="Sprite3D" type="Sprite3D" parent="blockbench_export5"]
+transform = Transform3D(-0.167877, 0.926652, 2.84836, 0.0545206, 2.8533, -0.925047, -2.9948, 8.9407e-08, -0.176508, -0.17944, 1.00141, 0)
+texture_filter = 0
+texture = ExtResource("10_eql44")
+
+[node name="Sprite3D2" type="Sprite3D" parent="blockbench_export5"]
+transform = Transform3D(-0.167877, 0.926652, 2.84836, 0.0545206, 2.8533, -0.925047, -2.9948, 8.9407e-08, -0.176508, 0.0430326, 1.00141, 0.648818)
+texture_filter = 0
+texture = ExtResource("10_eql44")
+
+[node name="Sprite3D3" type="Sprite3D" parent="blockbench_export5"]
+transform = Transform3D(-0.167877, 0.926652, 2.84836, 0.0545206, 2.8533, -0.925047, -2.9948, 8.9407e-08, -0.176508, 0.0430326, 1.62917, 0.648818)
+texture_filter = 0
+texture = ExtResource("10_eql44")
+
+[node name="Sprite3D4" type="Sprite3D" parent="blockbench_export5"]
+transform = Transform3D(-0.167877, 0.926652, 2.84836, 0.0545206, 2.8533, -0.925047, -2.9948, 8.9407e-08, -0.176508, 0.0430326, 1.62917, -0.225838)
+texture_filter = 0
+texture = ExtResource("10_eql44")
+
+[node name="Sprite3D5" type="Sprite3D" parent="blockbench_export5"]
+transform = Transform3D(-0.154447, 0.85252, 2.62049, 0.000671314, 2.62461, -0.853822, -2.75568, -0.0471416, -0.147078, 0.0430326, 2.42154, -0.225838)
+texture_filter = 0
+texture = ExtResource("11_odm3m")
+
+[node name="Sprite3D6" type="Sprite3D" parent="blockbench_export5"]
+transform = Transform3D(-0.154447, 0.85252, 2.62049, 0.000671314, 2.62461, -0.853822, -2.75568, -0.0471416, -0.147078, 0.0430326, 2.42154, 0.635985)
+texture_filter = 0
+texture = ExtResource("11_odm3m")

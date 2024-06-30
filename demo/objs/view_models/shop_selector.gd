@@ -7,18 +7,21 @@ func _ready():
 	buy_coffe.check_param_entity("res_money", 150.0)
 	buy_coffe.plus_param_controller("item_coffe", 1)
 	buy_coffe.plus_param_entity("res_money", -150.0)
+	buy_coffe.set_succesfull("Вы купили кофе")
 	buy_coffe.set_add_day(false)
 	
 	var buy_bar : ParametrInteractor = ParametrInteractor.new()
 	buy_bar.check_param_entity("res_money", 120.0)
 	buy_bar.plus_param_controller("item_bar", 1)
 	buy_bar.plus_param_entity("res_money", -120.0)
+	buy_bar.set_succesfull("Вы купили батончик")
 	buy_bar.set_add_day(false)
 	
 	var buy_meat : ParametrInteractor = ParametrInteractor.new()
 	buy_meat.check_param_entity("res_money", 200.0)
 	buy_meat.plus_param_controller("item_meat", 1)
 	buy_meat.plus_param_entity("res_money", -200.0)
+	buy_meat.set_succesfull("Вы купили мясо")
 	buy_meat.set_add_day(false)
 	
 	

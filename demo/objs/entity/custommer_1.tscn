@@ -1,11 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://ftalhwisot03"]
 
 [ext_resource type="Script" path="res://objs/entity/caffe_entity.gd" id="1_rsi4i"]
-[ext_resource type="PackedScene" uid="uid://dt56gvh7fa18k" path="res://res/meshs/furniture/Table.gltf" id="2_adwqq"]
 [ext_resource type="SpriteFrames" uid="uid://dx6od4w3gh5bk" path="res://res/sprites/items/food.tres" id="2_mqh1x"]
+[ext_resource type="PackedScene" uid="uid://htstbe21tx8k" path="res://res/meshs/furniture/Table_round.gltf" id="3_npcsx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ak526"]
-size = Vector3(1.75317, 0.748535, 1)
+size = Vector3(1.3401, 0.654663, 1.13966)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_emd5k"]
 size = Vector3(0.6, 1, 2.98)
@@ -15,7 +15,7 @@ interact_path = NodePath("Area3D")
 script = ExtResource("1_rsi4i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0020752, 0.376709, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000709895, 0.329773, 0.00156403)
 shape = SubResource("BoxShape3D_ak526")
 
 [node name="Area3D" type="Area3D" parent="."]
@@ -34,5 +34,5 @@ transform = Transform3D(3.28, 0, 0, 0, 3.18271, 0.792948, 0, -0.792948, 3.18271,
 texture_filter = 0
 sprite_frames = ExtResource("2_mqh1x")
 
-[node name="blockbench_export" parent="." instance=ExtResource("2_adwqq")]
-transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, 0, 0, 0)
+[node name="blockbench_export" parent="." instance=ExtResource("3_npcsx")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)

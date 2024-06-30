@@ -5,6 +5,7 @@
 void godot::ParametrInteractor::_bind_methods()
 {
     ClassDB::bind_method(D_METHOD("set_sound_key"), &ParametrInteractor::set_sound_key);
+    ClassDB::bind_method(D_METHOD("set_succesfull"), &ParametrInteractor::set_succesfull);
 
     ClassDB::bind_method(D_METHOD("set_add_day"), &ParametrInteractor::set_add_day);
 
@@ -81,17 +82,20 @@ void godot::ParametrInteractor::set_value(Entity *p_entity)
     for(auto i : map_plus_param_entity){
         if(!data->has_float(i.key)){
             UtilityFunctions::print("ParametrInteractor: data not have float: ", i.key, ". insert");
-            
         }
         float tmp = data->get_float(i.key);
         data->put_float(i.key, tmp + i.value);
     }
-
 }
 
 void godot::ParametrInteractor::set_sound_key(String p_sound_key)
 {
     this->sound_key = p_sound_key;
+}
+
+void godot::ParametrInteractor::set_succesfull(String p_message)
+{
+    this->message = p_message;
 }
 
 void godot::ParametrInteractor::check_param_entity(String key, float value)
@@ -124,10 +128,12 @@ bool godot::ParametrInteractor::_interact(Entity *p_entity)
     
     if(!check_valide(p_entity))
         return false;
+        
     
     UtilityFunctions::print("ParametrInteractor: start interact");
     if(check_value(p_entity)){
         set_value(p_entity);
+        p_entity->emit_signal("on_buffs_change");
 
         if(add_day)
             StaticMethods::add_time();
@@ -135,10 +141,13 @@ bool godot::ParametrInteractor::_interact(Entity *p_entity)
         if(sound_key != String())
             StaticMethods::play_sound(sound_key);
 
+        if(message != String())
+            StaticMethods::spawn_message(message, 1);
         return true;
     }
 
-    return true;
+    StaticMethods::spawn_message(Util::get_value_from_config("word", "no_res"), 2);
+    return false;
 }
 
 godot::Interaction *godot::ParametrInteractor::_clone()

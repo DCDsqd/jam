@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://ccebw5qs4w7ja"]
+
+[ext_resource type="Texture2D" uid="uid://bsxvkar7van4b" path="res://res/materials/brickscafe/brickscafe.png" id="1_xvqy1"]
+[ext_resource type="Texture2D" uid="uid://chn05m7bie7fw" path="res://res/materials/brickscafe/brickscafe_s.png" id="2_red1u"]
+[ext_resource type="Texture2D" uid="uid://cc2inngp4rnxs" path="res://res/materials/brickscafe/brickscafe_n.png" id="3_26hx1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qd3u0"]
+albedo_texture = ExtResource("1_xvqy1")
+metallic = 1.0
+metallic_texture = ExtResource("2_red1u")
+normal_enabled = true
+normal_texture = ExtResource("3_26hx1")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="QuadMesh" id="QuadMesh_vj6cf"]
+size = Vector2(2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a14ij"]
+size = Vector3(2, 2, 0.1)
+
+[node name="BrickCafe" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_qd3u0")
+mesh = SubResource("QuadMesh_vj6cf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
+shape = SubResource("BoxShape3D_a14ij")

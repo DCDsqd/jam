@@ -1,8 +1,10 @@
 #include "shading_view_model.h"
 #include "godot_cpp/variant/utility_functions.hpp"
+#include "util/static_methods.hpp"
 
 void godot::ShadingViewModel::_bind_methods()
 {
+    ClassDB::bind_method(D_METHOD("set_message"), &ShadingViewModel::set_message);
     ClassDB::bind_method(D_METHOD("add_plus_score"), &ShadingViewModel::add_plus_score);
 }
 
@@ -21,6 +23,11 @@ void godot::ShadingViewModel::calculate_score()
             UtilityFunctions::print("ShadingViewModel: data doesn't have key: ", i.key);
         }
     }
+}
+
+void godot::ShadingViewModel::set_message(String p_message)
+{
+    this->message = p_message;
 }
 
 void godot::ShadingViewModel::add_plus_score(String key, float value)
@@ -74,6 +81,9 @@ void godot::ShadingViewModel::_close_window()
     }else{
         UtilityFunctions::print("JumpMiniGame: player or player data is null");
     }
+
+    if(message != String())
+        StaticMethods::spawn_message(message, 1);
 }
 
 void godot::ShadingViewModel::_int_process()

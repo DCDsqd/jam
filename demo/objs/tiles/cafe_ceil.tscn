@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1n4iwsjdb3dg"]
+
+[ext_resource type="Texture2D" uid="uid://dnbdlv1s5fvn7" path="res://res/materials/cafe_ceil/ceiling.png" id="1_m6kgg"]
+[ext_resource type="Texture2D" uid="uid://itr4cgudaf8q" path="res://res/materials/cafe_ceil/ceiling_s.png" id="2_e8r56"]
+[ext_resource type="Texture2D" uid="uid://b2qaodavlu4ab" path="res://res/materials/cafe_ceil/ceiling_n.png" id="3_oc8ad"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn4al"]
+albedo_texture = ExtResource("1_m6kgg")
+metallic = 1.0
+metallic_texture = ExtResource("2_e8r56")
+normal_enabled = true
+normal_texture = ExtResource("3_oc8ad")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vgdyp"]
+
+[node name="CafeCeil" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_gn4al")
+mesh = SubResource("PlaneMesh_vgdyp")

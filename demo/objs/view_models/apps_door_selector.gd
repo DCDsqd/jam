@@ -12,7 +12,7 @@ func _ready():
 	interactor1.set_interactor(cafe_interactor)
 	
 	var friends_meet : ViewModelInteractor = ViewModelInteractor.new()
-	friends_meet.set_view_model("res://objs/mini_games/cleaning/clean_skip.tscn")
+	friends_meet.set_view_model("res://objs/mini_games/friends_meet/friends_meet.tscn")
 	friends_meet.set_sound_key("sound_friends")
 	
 	var interactor2 : TimeSetInteractor = TimeSetInteractor.new();

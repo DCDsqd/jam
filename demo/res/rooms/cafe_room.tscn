@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcmpqyfcok40g"]
+[gd_scene load_steps=11 format=3 uid="uid://bcmpqyfcok40g"]
 
 [ext_resource type="PackedScene" uid="uid://dvrk3n8arnhni" path="res://objs/tiles/wood_floor.tscn" id="1_e680u"]
-[ext_resource type="PackedScene" uid="uid://c0ia2n1vx22lf" path="res://objs/tiles/single_wall.tscn" id="2_onf6f"]
 [ext_resource type="PackedScene" uid="uid://b1e5i51kci67t" path="res://res/meshs/furniture/bar_stand.gltf" id="3_a84ke"]
+[ext_resource type="PackedScene" uid="uid://b1n4iwsjdb3dg" path="res://objs/tiles/cafe_ceil.tscn" id="3_efkx7"]
 [ext_resource type="Environment" uid="uid://bk0s0ctegvngt" path="res://res/shaders/env/cafe_room.tres" id="4_grev7"]
 [ext_resource type="Texture2D" uid="uid://bjq2tpwid1k53" path="res://res/sprites/furniture/lamp.png" id="4_s6gd8"]
 [ext_resource type="PackedScene" uid="uid://c1poq1oebxyjr" path="res://res/meshs/furniture/door_cafe.gltf" id="6_0nquo"]
+[ext_resource type="PackedScene" uid="uid://ccebw5qs4w7ja" path="res://objs/tiles/brick_cafe.tscn" id="6_likxt"]
+[ext_resource type="Texture2D" uid="uid://cdrpygahec6nw" path="res://res/sprites/furniture/window2.png" id="7_lb2xu"]
+[ext_resource type="PackedScene" uid="uid://yfuro5vfhepv" path="res://res/meshs/furniture/Shelf.gltf" id="8_bc4iw"]
+[ext_resource type="PackedScene" uid="uid://g0tbtb7ycpin" path="res://res/meshs/furniture/radio.gltf" id="10_cbo83"]
 
 [node name="CafeScene" type="Node3D"]
 
@@ -74,164 +78,164 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
 skeleton = NodePath("../..")
 
-[node name="WoodFloor17" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 6, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor18" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 4, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor19" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 8, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor20" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 10, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor21" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor22" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -2, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor23" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -4, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor24" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 2, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor25" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 6, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor26" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 4, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor27" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 8, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor28" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 10, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor29" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor30" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -2, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor31" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -4, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="WoodFloor32" parent="Node" instance=ExtResource("1_e680u")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 2, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="SingleWall" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -3)
-skeleton = NodePath("../..")
-
-[node name="SingleWall2" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -3)
-skeleton = NodePath("../..")
-
-[node name="SingleWall3" parent="Node" instance=ExtResource("2_onf6f")]
+[node name="BrickCafe" parent="Node" instance=ExtResource("6_likxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3)
 skeleton = NodePath("../..")
 
-[node name="SingleWall4" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -3)
-skeleton = NodePath("../..")
-
-[node name="SingleWall5" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -3)
-skeleton = NodePath("../..")
-
-[node name="SingleWall6" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -3)
-skeleton = NodePath("../..")
-
-[node name="SingleWall7" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -3)
-skeleton = NodePath("../..")
-
-[node name="SingleWall8" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, -3)
-skeleton = NodePath("../..")
-
-[node name="SingleWall9" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, -3)
-skeleton = NodePath("../..")
-
-[node name="SingleWall17" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 1, 0)
-skeleton = NodePath("../..")
-
-[node name="SingleWall18" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="SingleWall19" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 1, -2)
-skeleton = NodePath("../..")
-
-[node name="SingleWall20" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="SingleWall21" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 11, 1, -2)
-skeleton = NodePath("../..")
-
-[node name="SingleWall22" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 11, 3, -2)
-skeleton = NodePath("../..")
-
-[node name="SingleWall23" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 11, 1, 0)
-skeleton = NodePath("../..")
-
-[node name="SingleWall24" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 11, 3, 0)
-skeleton = NodePath("../..")
-
-[node name="SingleWall10" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -3)
-skeleton = NodePath("../..")
-
-[node name="SingleWall11" parent="Node" instance=ExtResource("2_onf6f")]
+[node name="BrickCafe2" parent="Node" instance=ExtResource("6_likxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3)
 skeleton = NodePath("../..")
 
-[node name="SingleWall12" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -3)
+[node name="BrickCafe3" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -3)
 skeleton = NodePath("../..")
 
-[node name="SingleWall13" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -3)
+[node name="BrickCafe4" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -3)
 skeleton = NodePath("../..")
 
-[node name="SingleWall14" parent="Node" instance=ExtResource("2_onf6f")]
+[node name="BrickCafe5" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe6" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe7" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe8" parent="Node" instance=ExtResource("6_likxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -3)
 skeleton = NodePath("../..")
 
-[node name="SingleWall15" parent="Node" instance=ExtResource("2_onf6f")]
+[node name="BrickCafe9" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe10" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe11" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe12" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe13" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 1, -2)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe14" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 3, -2)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe19" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 1, 0)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe20" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe21" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 1, 0)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe22" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe23" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 1, -2)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe24" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 3, -2)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe15" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe16" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe17" parent="Node" instance=ExtResource("6_likxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe18" parent="Node" instance=ExtResource("6_likxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, -3)
 skeleton = NodePath("../..")
 
-[node name="SingleWall16" parent="Node" instance=ExtResource("2_onf6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, -3)
+[node name="CafeCeil" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -4, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil2" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -4, 3, -2)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil3" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -2, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil4" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -2, 3, -2)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil5" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil6" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 3, -2)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil7" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 2, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil8" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 2, 3, -2)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil9" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 4, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil10" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 4, 3, -2)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil11" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 6, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil12" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 6, 3, -2)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil13" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 8, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil14" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 8, 3, -2)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil15" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 10, 3, 0)
+skeleton = NodePath("../..")
+
+[node name="CafeCeil16" parent="Node" instance=ExtResource("3_efkx7")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 10, 3, -2)
 skeleton = NodePath("../..")
 
 [node name="blockbench_export" parent="." instance=ExtResource("3_a84ke")]
@@ -332,4 +336,58 @@ transform = Transform3D(0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.70710
 light_energy = 0.0
 
 [node name="blockbench_export3" parent="." instance=ExtResource("6_0nquo")]
-transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, -4.93158, -0.0301675, -1.38614)
+transform = Transform3D(-3.71547e-08, 0, -0.85, 0, 0.85, 0, 0.85, 0, -3.71547e-08, -4.90912, -0.0301675, -1.38614)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(3.6, 0, 0, 0, 3.6, 0, 0, 0, 3.6, -2.04964, 1.40188, -2.97253)
+shaded = true
+texture_filter = 0
+texture = ExtResource("7_lb2xu")
+
+[node name="blockbench_export4" parent="Sprite3D" instance=ExtResource("8_bc4iw")]
+transform = Transform3D(-1.54204e-08, 0, 0.352778, 0, 0.352778, 0, -0.352778, 0, -1.54204e-08, 0.00150597, -0.564105, 0.0874162)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Sprite3D"]
+transform = Transform3D(-0.277144, -0.0186076, -0.00236627, -0.0186076, 0.268313, 0.0694445, -0.00236625, 0.0694445, -0.268947, 0, 0, 0)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.0
+shadow_enabled = true
+spot_range = 4.39536
+spot_angle = 55.504
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(3.6, 0, 0, 0, 3.6, 0, 0, 0, 3.6, 1.45, 1.402, -2.973)
+shaded = true
+texture_filter = 0
+texture = ExtResource("7_lb2xu")
+
+[node name="blockbench_export4" parent="Sprite3D2" instance=ExtResource("8_bc4iw")]
+transform = Transform3D(-1.54204e-08, 0, 0.352778, 0, 0.352778, 0, -0.352778, 0, -1.54204e-08, 0.00150597, -0.564105, 0.0874162)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Sprite3D2"]
+transform = Transform3D(-0.277144, -0.0186076, -0.00236627, -0.0186076, 0.268313, 0.0694445, -0.00236625, 0.0694445, -0.268947, 0, 0, 0)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.0
+shadow_enabled = true
+spot_range = 4.39536
+spot_angle = 55.504
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(3.6, 0, 0, 0, 3.6, 0, 0, 0, 3.6, 4.95036, 1.40188, -2.97253)
+shaded = true
+texture_filter = 0
+texture = ExtResource("7_lb2xu")
+
+[node name="blockbench_export4" parent="Sprite3D3" instance=ExtResource("8_bc4iw")]
+transform = Transform3D(-1.54204e-08, 0, 0.352778, 0, 0.352778, 0, -0.352778, 0, -1.54204e-08, 0.00150597, -0.564105, 0.0874162)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Sprite3D3"]
+transform = Transform3D(-0.277144, -0.0186076, -0.00236627, -0.0186076, 0.268313, 0.0694445, -0.00236625, 0.0694445, -0.268947, 0, 0, 0)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.0
+shadow_enabled = true
+spot_range = 4.39536
+spot_angle = 55.504
+
+[node name="blockbench_export4" parent="." instance=ExtResource("10_cbo83")]
+transform = Transform3D(-0.481427, 0, 0.27614, 0, 0.555, 0, -0.27614, 0, -0.481427, 6.12129, 0.70148, -2.37118)

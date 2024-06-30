@@ -24,7 +24,8 @@ bool godot::ProjectWorkInteractor::is_avaible(GameController *controller)
     
     if(controller->get_int("last_project_time") == controller->get_int("game_time") && 
             controller->get_int("last_project_day") == controller->get_int("game_day")){
-        
+
+        StaticMethods::spawn_message(Util::get_value_from_config("word", "project_step_lock"), 2);
         UtilityFunctions::print("ProjectWorkInteractor: not now");
         return false;
     }
@@ -101,20 +102,25 @@ bool godot::ProjectWorkInteractor::_interact(Entity *p_entity)
     if(step == 0){
         controller->put_int("lock_door", 1);
         UtilityFunctions::print("ProjectWorkInteractor: lock_door: ", controller->get_int("lock_door"));
+        StaticMethods::spawn_message(Util::get_value_from_config("word", "project_step_1"), 1);
     }
     else if(step == 1){
         spawn_game(step_two, p_entity);
         StaticMethods::add_time();
+        StaticMethods::spawn_message(Util::get_value_from_config("word", "project_step_2"), 1);
     }
     else if(step == 2){
         controller->put_int("lock_door", 1);
         UtilityFunctions::print("ProjectWorkInteractor: lock_door: ", controller->get_int("lock_door"));
+        StaticMethods::spawn_message(Util::get_value_from_config("word", "project_step_3"), 1);
     }
     else if(step == 3){
         spawn_game(step_four, p_entity);
         StaticMethods::add_time();
+        StaticMethods::spawn_message(Util::get_value_from_config("word", "project_step_4"), 1);
     }
     else{
+        StaticMethods::spawn_message(Util::get_value_from_config("word", "project_step_end"), 2);
         return false;
     }
 

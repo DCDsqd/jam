@@ -59,7 +59,7 @@ void godot::MessageModel::set_message(String message, int type)
 
 void godot::MessageModel::_open_window(Entity *interaction, Entity *interactor)
 {
-    timer = 60.0f;
+    timer = 120.0f;
     set_physics_process_internal(true);
 }
 

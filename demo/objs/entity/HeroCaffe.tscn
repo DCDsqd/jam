@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cub6mxxl317sd"]
+
+[ext_resource type="Script" path="res://objs/entity/Hero.gd" id="1_otk0q"]
+[ext_resource type="SpriteFrames" uid="uid://cmw06sesinuu1" path="res://res/sprites/entity/hero_cafe.tres" id="2_64x8d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vhqjk"]
+size = Vector3(0.390656, 0.675569, 0.136627)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_prn6j"]
+height = 0.435957
+radius = 0.361423
+
+[node name="Hero" type="MovingEntity"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+collision_layer = 3
+collision_mask = 3
+interact_path = NodePath("Area3D")
+model_path = NodePath("SpriteModel")
+player_path = NodePath("AudioStreamPlayer3D")
+script = ExtResource("1_otk0q")
+
+[node name="SpriteModel" type="SpriteModel" parent="."]
+sprite_path = NodePath("AnimatedSprite3D")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="SpriteModel"]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
+shaded = true
+alpha_cut = 3
+texture_filter = 0
+sprite_frames = ExtResource("2_64x8d")
+animation = &"idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_vhqjk")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.666667, 0, 0, 0, 0.666667, 0, 0, 0, 0.666667, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_prn6j")

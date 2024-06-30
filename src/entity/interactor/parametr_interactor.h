@@ -30,6 +30,7 @@ protected:
     
     bool add_day = false;
     String sound_key = String();
+    String message = String();
 
     bool check_valide(Entity *p_entity);
     bool check_value(Entity *p_entity);
@@ -37,6 +38,7 @@ protected:
 
 public:
     void set_sound_key(String p_sound_key);
+    void set_succesfull(String p_message);
 
     void check_param_entity(String key, float value);
     void check_param_controller(String key, int value);

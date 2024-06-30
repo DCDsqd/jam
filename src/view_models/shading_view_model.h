@@ -9,6 +9,7 @@
 #include <godot_cpp/classes/entity.hpp>
 #include <godot_cpp/classes/entity_data.hpp>
 #include <godot_cpp/templates/hash_map.hpp>
+#include <godot_cpp/classes/util.hpp>
 
 namespace godot {
 
@@ -21,13 +22,14 @@ protected:
     bool start = false;
     Entity* player = nullptr;
     Control *control = nullptr;
+    String message = String();
     
     HashMap<String, float> plus_score;
     
     void calculate_score();
 
 public:
-
+    void set_message(String p_message);
     void add_plus_score(String key, float value);
 
 	void _open_window(Entity *interaction, Entity *interactor) override;
