@@ -23,11 +23,15 @@ protected:
     String order_name;
     Vector3 pos;
     bool has_order = true;
+    CaffeController *controller = nullptr;
+
+    void spawn_cloud(String name);
 
 public:
     void set_order_name(String p_order_name);
     void set_has_order(bool p_has_order);
     void set_pos(Vector3 p_pos);
+    void set_controller(CaffeController *p_controller);
     String get_order_name();
     Vector3 get_pos();
 

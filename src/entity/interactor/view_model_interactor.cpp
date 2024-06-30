@@ -1,14 +1,21 @@
 #include "view_model_interactor.h"
 #include "godot_cpp/variant/utility_functions.hpp"
+#include "util/static_methods.hpp"
 
 void godot::ViewModelInteractor::_bind_methods()
 {
     ClassDB::bind_method(D_METHOD("set_view_model"), &ViewModelInteractor::set_view_model);
+    ClassDB::bind_method(D_METHOD("set_sound_key"), &ViewModelInteractor::set_sound_key);
 }
 
 void godot::ViewModelInteractor::set_view_model(String p_model_path)
 {
     this->model_path = p_model_path;
+}
+
+void godot::ViewModelInteractor::set_sound_key(String p_sound_key)
+{
+    this->sound_key = p_sound_key;
 }
 
 bool godot::ViewModelInteractor::_interact(Entity *p_entity)
@@ -34,6 +41,9 @@ bool godot::ViewModelInteractor::_interact(Entity *p_entity)
     }
     hud->add_child(model);
     model->open_window(get_entity(), p_entity);
+
+    if(sound_key != String())
+        StaticMethods::play_sound(sound_key);
 
     return true;
 }

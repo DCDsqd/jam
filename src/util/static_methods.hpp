@@ -10,6 +10,8 @@
 #include <godot_cpp/classes/entity_data.hpp>
 #include <godot_cpp/classes/view_model.hpp>
 #include "godot_cpp/variant/utility_functions.hpp"
+#include "godot_cpp/classes/file_access.hpp"
+#include "godot_cpp/classes/json.hpp"
 #include "variants/hero_stats.hpp"
 #include "variants/task_pull.hpp"
 
@@ -155,6 +157,46 @@ public:
 
         scene->add_child(node);
         node->set_global_position(position);
+    }
+
+    static void play_sound(String key){
+        GameController *controller = EternityData::get_singleton()->get_controller();
+        if(controller == nullptr){
+            UtilityFunctions::print("StaticMethods: controller is null");
+            return;
+        }
+        if(!controller->has_int(key)){
+            controller->put_int(key, 0);
+        }
+        int carrera = controller->get_int(key);
+
+        String audio_map_path = Util::get_value_from_config("util", "audio_map");
+        if(audio_map_path == String()){
+            UtilityFunctions::print("StaticMethods: audio_map_path is null");
+            return;
+        }
+
+        int num = controller->get_int(key);
+        String text = FileAccess::get_file_as_string(audio_map_path);
+
+        if(text == String()){
+            UtilityFunctions::print("StaticMethods: text is null");
+            return;
+        }
+        Dictionary dict = JSON::parse_string(text);
+        if(!dict.has(key)){
+            UtilityFunctions::print("StaticMethods: dict has no key: ", key);
+            return;
+        }
+        Array arr = dict.get(key, Array());
+
+        if(!(carrera < arr.size())){
+            UtilityFunctions::print("StaticMethods: carrera to long: ", carrera);
+            return;
+        }
+
+        controller->put_int(key, num+1);
+        controller->play_sound(arr[carrera]);
     }
 
     static void end_game(){

@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0ia2n1vx22lf"]
+[gd_scene load_steps=4 format=3 uid="uid://c0ia2n1vx22lf"]
 
 [ext_resource type="Material" uid="uid://dgs3ryud5a8xw" path="res://res/materials/appswall/apps_wall.tres" id="1_k6e4c"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ki5ip"]
 size = Vector2(2, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mh1v8"]
+size = Vector3(2, 2, 0.1)
+
 [node name="SingleWall" type="MeshInstance3D"]
 material_override = ExtResource("1_k6e4c")
 mesh = SubResource("QuadMesh_ki5ip")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
+shape = SubResource("BoxShape3D_mh1v8")

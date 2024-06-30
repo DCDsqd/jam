@@ -20,6 +20,7 @@ bool godot::CaffeController::init_order(ModelEntity *mentity)
 
     CafeGetOrderInteractor *interaction = memnew(CafeGetOrderInteractor);
     interaction->set_pos(mentity->get_position());
+    interaction->set_controller(this);
     interaction->set_has_order(true);
     entity->set_interaction(interaction);
 

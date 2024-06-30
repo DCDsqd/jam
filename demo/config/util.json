@@ -6,5 +6,6 @@
 	"correct_cloud": "res://res/sprites/items/complite.png",
 	"bad_cloud": "res://res/sprites/items/none.png",
 	
-	"end_game_screen": "res://objs/view_models/end_game.tscn"
+	"end_game_screen": "res://objs/view_models/end_game.tscn",
+	"audio_map": "res://config/sound_map.json"
 }

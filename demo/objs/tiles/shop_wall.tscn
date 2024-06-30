@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuqqwu3uhcr2o"]
+[gd_scene load_steps=4 format=3 uid="uid://cuqqwu3uhcr2o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2h1p"]
 albedo_color = Color(0.588235, 0.929412, 0.945098, 1)
@@ -6,6 +6,15 @@ albedo_color = Color(0.588235, 0.929412, 0.945098, 1)
 [sub_resource type="QuadMesh" id="QuadMesh_5dpq3"]
 size = Vector2(2, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cfmax"]
+size = Vector3(2, 2, 0.1)
+
 [node name="ShopWall" type="MeshInstance3D"]
 material_override = SubResource("StandardMaterial3D_f2h1p")
 mesh = SubResource("QuadMesh_5dpq3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
+shape = SubResource("BoxShape3D_cfmax")

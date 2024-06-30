@@ -1,0 +1,58 @@
+{
+	"sound_chill" : [
+		"res://res/sound/voice/test/coin.wav",
+		"res://res/sound/voice/test/hp.wav",
+		"res://res/sound/voice/test/keyboard.wav",
+		"res://res/sound/voice/test/coin_2.wav",
+		"res://res/sound/voice/test/hp_minus.wav"
+	],
+	"sound_clean" : [
+		"res://res/sound/voice/test/coin.wav",
+		"res://res/sound/voice/test/hp.wav",
+		"res://res/sound/voice/test/keyboard.wav",
+		"res://res/sound/voice/test/coin_2.wav",
+		"res://res/sound/voice/test/hp_minus.wav"
+	],
+	"sound_friends" : [
+		"res://res/sound/voice/test/coin.wav",
+		"res://res/sound/voice/test/hp.wav",
+		"res://res/sound/voice/test/keyboard.wav",
+		"res://res/sound/voice/test/coin_2.wav",
+		"res://res/sound/voice/test/hp_minus.wav"
+	],
+	"sound_morning" : [
+		"res://res/sound/voice/test/coin.wav",
+		"res://res/sound/voice/test/hp.wav",
+		"res://res/sound/voice/test/keyboard.wav",
+		"res://res/sound/voice/test/coin_2.wav",
+		"res://res/sound/voice/test/hp_minus.wav"
+	],
+	"sound_project" : [
+		"res://res/sound/voice/test/coin.wav",
+		"res://res/sound/voice/test/hp.wav",
+		"res://res/sound/voice/test/keyboard.wav",
+		"res://res/sound/voice/test/coin_2.wav",
+		"res://res/sound/voice/test/hp_minus.wav"
+	],
+	"sound_shop" : [
+		"res://res/sound/voice/test/coin.wav",
+		"res://res/sound/voice/test/hp.wav",
+		"res://res/sound/voice/test/keyboard.wav",
+		"res://res/sound/voice/test/coin_2.wav",
+		"res://res/sound/voice/test/hp_minus.wav"
+	],
+	"sound_sleep" : [
+		"res://res/sound/voice/test/coin.wav",
+		"res://res/sound/voice/test/hp.wav",
+		"res://res/sound/voice/test/keyboard.wav",
+		"res://res/sound/voice/test/coin_2.wav",
+		"res://res/sound/voice/test/hp_minus.wav"
+	],
+	"sound_work" : [
+		"res://res/sound/voice/test/coin.wav",
+		"res://res/sound/voice/test/hp.wav",
+		"res://res/sound/voice/test/keyboard.wav",
+		"res://res/sound/voice/test/coin_2.wav",
+		"res://res/sound/voice/test/hp_minus.wav"
+	]
+}

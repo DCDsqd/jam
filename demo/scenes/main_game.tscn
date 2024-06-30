@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scenes/start_music.gd" id="2_trd7b"]
 
 [node name="MainGame" type="SimpleGameController"]
+player_path = NodePath("AudioStreamPlayer")
 script = ExtResource("1_7tm4u")
 
 [node name="SimpleMusicalController" type="SimpleMusicalController" parent="."]
@@ -14,3 +15,5 @@ script = ExtResource("2_trd7b")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SimpleMusicalController"]
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="SimpleMusicalController"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
