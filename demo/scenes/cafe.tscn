@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bcmpqyfcok40g" path="res://res/rooms/cafe_room.tscn" id="1_4ef60"]
 [ext_resource type="PackedScene" uid="uid://ch7t0mltj8jjw" path="res://util/activator.tscn" id="1_cuk6y"]
-[ext_resource type="PackedScene" uid="uid://cpal2j5bw454l" path="res://objs/entity/Hero.tscn" id="2_onwa2"]
 [ext_resource type="PackedScene" uid="uid://ck1i5y3byl6tx" path="res://objs/hud/menu/Menu.tscn" id="3_l4xth"]
 [ext_resource type="PackedScene" uid="uid://d12pmgkapb58a" path="res://objs/hud/hud/Hud.tscn" id="3_mr4n7"]
+[ext_resource type="PackedScene" uid="uid://cub6mxxl317sd" path="res://objs/entity/HeroCaffe.tscn" id="5_gwfs0"]
 [ext_resource type="PackedScene" uid="uid://ftalhwisot03" path="res://objs/entity/custommer_1.tscn" id="5_i022i"]
 [ext_resource type="PackedScene" uid="uid://boa5gp5qwxt7k" path="res://objs/entity/order_table_1.tscn" id="8_3vjjj"]
 [ext_resource type="PackedScene" uid="uid://brn1o3xcjppmo" path="res://res/meshs/furniture/super_chair.gltf" id="9_8qpi3"]
@@ -57,16 +57,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74089, 0, -1.09942)
 
 [node name="Hud" parent="." instance=ExtResource("3_mr4n7")]
 
+[node name="Menu" parent="." instance=ExtResource("3_l4xth")]
+
+[node name="Hero" parent="." groups=["for_save"] instance=ExtResource("5_gwfs0")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.83192, 0.547791, -0.893658)
+
 [node name="ECamera" type="ECamera" parent="."]
-transform = Transform3D(0.996195, -0.0248993, -0.0835233, 0, 0.958323, -0.285688, 0.0871557, 0.284601, 0.954676, -4.31241, 0.744223, 1.41588)
+transform = Transform3D(0.996195, -0.0100174, -0.0865781, 0, 0.993373, -0.114937, 0.0871557, 0.1145, 0.989593, -4.312, 1.104, 1.416)
 target_path = NodePath("../Hero")
 speed_scale = 2.0
-outside_delta = Vector3(0.31, -0.14, -1.49)
-
-[node name="Hero" parent="." groups=["for_save"] instance=ExtResource("2_onwa2")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.84741, 0.534223, -0.819122)
-
-[node name="Menu" parent="." instance=ExtResource("3_l4xth")]
+outside_delta = Vector3(0.32, -0.371, -1.54)
 
 [node name="CaffeController" type="CaffeController" parent="."]
 clients = Array[NodePath]([NodePath("../Custommer1"), NodePath("../Custommer2"), NodePath("../Custommer3")])

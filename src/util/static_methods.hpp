@@ -82,8 +82,35 @@ public:
         }
     }
 
+    static void show_new_day(){
+        String model_path = Util::get_value_from_config("util", "new_day_model");
+
+        Node *node = Util::spawn_node(model_path);
+        if(node == nullptr){
+            UtilityFunctions::print("StaticMethods: node is not created");
+            return;
+        }
+
+        ViewModel *model = Object::cast_to<ViewModel>(node);
+        if(!model){
+            UtilityFunctions::print("StaticMethods: node is not a viewModel");
+            return;
+        }
+
+        Hud* hud = EternityData::get_singleton()->get_hud();
+
+        if(hud == nullptr){
+            UtilityFunctions::print("StaticMethods: hud is null");
+            return;
+        }
+
+        hud->add_child(model);
+        model->open_window(nullptr, nullptr);
+    }
+
     static void check_end(int cur_day){
         if(cur_day < 3){
+            show_new_day();
             return;
         }
 
@@ -115,7 +142,8 @@ public:
             end_game();
             return;
         }
-
+        
+        show_new_day();
 
 
         //if(cur_day == 3 && con)

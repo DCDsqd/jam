@@ -8,5 +8,6 @@
 	
 	"end_game_screen": "res://objs/view_models/end_game.tscn",
 	"audio_map": "res://config/sound_map.json",
-	"message_model_impl" : "res://util/message_model_impl.tscn"
+	"message_model_impl" : "res://util/message_model_impl.tscn",
+	"new_day_model" : "res://objs/view_models/new_day_model.tscn"
 }

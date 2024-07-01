@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bcmpqyfcok40g"]
+[gd_scene load_steps=12 format=3 uid="uid://bcmpqyfcok40g"]
 
 [ext_resource type="PackedScene" uid="uid://dvrk3n8arnhni" path="res://objs/tiles/wood_floor.tscn" id="1_e680u"]
 [ext_resource type="PackedScene" uid="uid://b1e5i51kci67t" path="res://res/meshs/furniture/bar_stand.gltf" id="3_a84ke"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ccebw5qs4w7ja" path="res://objs/tiles/brick_cafe.tscn" id="6_likxt"]
 [ext_resource type="Texture2D" uid="uid://cdrpygahec6nw" path="res://res/sprites/furniture/window2.png" id="7_lb2xu"]
 [ext_resource type="PackedScene" uid="uid://yfuro5vfhepv" path="res://res/meshs/furniture/Shelf.gltf" id="8_bc4iw"]
+[ext_resource type="Texture2D" uid="uid://uq1qluc6snj1" path="res://res/sprites/furniture/Plato.png" id="8_r8nc3"]
 [ext_resource type="PackedScene" uid="uid://g0tbtb7ycpin" path="res://res/meshs/furniture/radio.gltf" id="10_cbo83"]
 
 [node name="CafeScene" type="Node3D"]
@@ -338,6 +339,12 @@ light_energy = 0.0
 [node name="blockbench_export3" parent="." instance=ExtResource("6_0nquo")]
 transform = Transform3D(-3.71547e-08, 0, -0.85, 0, 0.85, 0, 0.85, 0, -3.71547e-08, -4.90912, -0.0301675, -1.38614)
 
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(3.6, 0, 0, 0, 3.6, 0, 0, 0, 3.6, 8.88657, 2.2625, -2.97253)
+shaded = true
+texture_filter = 0
+texture = ExtResource("8_r8nc3")
+
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(3.6, 0, 0, 0, 3.6, 0, 0, 0, 3.6, -2.04964, 1.40188, -2.97253)
 shaded = true
@@ -348,7 +355,7 @@ texture = ExtResource("7_lb2xu")
 transform = Transform3D(-1.54204e-08, 0, 0.352778, 0, 0.352778, 0, -0.352778, 0, -1.54204e-08, 0.00150597, -0.564105, 0.0874162)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Sprite3D"]
-transform = Transform3D(-0.277144, -0.0186076, -0.00236627, -0.0186076, 0.268313, 0.0694445, -0.00236625, 0.0694445, -0.268947, 0, 0, 0)
+transform = Transform3D(-0.277144, -0.0186076, -0.00236627, -0.0186076, 0.268313, 0.0694444, -0.00236625, 0.0694444, -0.268947, 0, 0, 0)
 light_energy = 4.0
 light_volumetric_fog_energy = 4.0
 shadow_enabled = true

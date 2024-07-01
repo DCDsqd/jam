@@ -1,5 +1,6 @@
 #include "jump_mini_game.h"
 #include "godot_cpp/variant/utility_functions.hpp"
+#include "util/static_methods.hpp"
 
 void godot::JumpMiniGame::calculate_score()
 {
@@ -20,6 +21,9 @@ void godot::JumpMiniGame::calculate_score()
 
 void godot::JumpMiniGame::_bind_methods()
 {
+    ClassDB::bind_method(D_METHOD("set_skip_day"), &JumpMiniGame::set_skip_day);
+    ClassDB::bind_method(D_METHOD("set_add_time"), &JumpMiniGame::set_add_time);
+
     ClassDB::bind_method(D_METHOD("set_param"), &JumpMiniGame::set_param);
     ClassDB::bind_method(D_METHOD("set_modifier"), &JumpMiniGame::set_modifier);
     ClassDB::bind_method(D_METHOD("set_start_value"), &JumpMiniGame::set_start_value);
@@ -61,11 +65,32 @@ void godot::JumpMiniGame::_close_window()
         UtilityFunctions::print("JumpMiniGame: player or player data is null");
     }
 
+    if(skip_day){
+        StaticMethods::skip_day();
+        return;
+    }
+
+    if(add_time){
+        StaticMethods::add_time();
+        return;
+    }
+
+
 }
 
 void godot::JumpMiniGame::_int_process()
 {
 
+}
+
+void godot::JumpMiniGame::set_skip_day(bool p_skip_day)
+{
+    this->skip_day = p_skip_day;
+}
+
+void godot::JumpMiniGame::set_add_time(bool p_add_time)
+{
+    this->add_time = p_add_time;
 }
 
 void godot::JumpMiniGame::set_param(String p_param)

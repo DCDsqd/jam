@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://yla7clmqwske"]
+[gd_scene load_steps=8 format=3 uid="uid://yla7clmqwske"]
 
 [ext_resource type="PackedScene" uid="uid://ch7t0mltj8jjw" path="res://util/activator.tscn" id="1_p2bqj"]
 [ext_resource type="PackedScene" uid="uid://d12pmgkapb58a" path="res://objs/hud/hud/Hud.tscn" id="3_4k4xv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ub6cwiv8dghw" path="res://res/rooms/shoop_room.tscn" id="4_jj22f"]
 [ext_resource type="PackedScene" uid="uid://ck1i5y3byl6tx" path="res://objs/hud/menu/Menu.tscn" id="5_e52cu"]
 [ext_resource type="PackedScene" uid="uid://bb5m2kan06opq" path="res://objs/entity/shop_entity.tscn" id="5_mtjea"]
+[ext_resource type="PackedScene" uid="uid://cdu4rvuuywo71" path="res://res/meshs/furniture/door.gltf" id="7_e76av"]
 
 [node name="Cafe" type="SingleHeroScene"]
 hero_key = "hero"
@@ -23,6 +24,9 @@ next_trigger = NodePath("TriggerMusic")
 
 [node name="TriggerMusic" type="TriggerMusic" parent="triggers/TriggerNextRoom"]
 music = "res://res/sound/music/bordel-theme.wav"
+next_trigger = NodePath("TriggerNewDay")
+
+[node name="TriggerNewDay" type="TriggerNewDay" parent="triggers/TriggerNextRoom/TriggerMusic"]
 
 [node name="Hud" parent="." instance=ExtResource("3_4k4xv")]
 
@@ -42,3 +46,6 @@ outside_delta = Vector3(0.31, -0.01, -1.651)
 
 [node name="ShopEntity" parent="." instance=ExtResource("5_mtjea")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.196436, 0.375661, -1.41105)
+
+[node name="blockbench_export" parent="." instance=ExtResource("7_e76av")]
+transform = Transform3D(-3.47506e-08, 0, -0.795, 0, 0.795, 0, 0.795, 0, -3.47506e-08, -5.5302, 0.000363998, -0.566825)

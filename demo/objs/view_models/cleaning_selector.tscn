@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bctbvmujc42un"]
+[gd_scene load_steps=2 format=3 uid="uid://bctbvmujc42un"]
 
 [ext_resource type="Script" path="res://objs/view_models/cleaning_selector.gd" id="1_wr43i"]
-[ext_resource type="Texture2D" uid="uid://dfghfxigsi3hv" path="res://res/sprites/items/google_cactus.png" id="2_l3hqt"]
 
 [node name="CleaningSelector" type="MultiSelectorModel"]
 start_pos = NodePath("Control/Control")
@@ -28,11 +27,3 @@ offset_right = -61.0
 offset_bottom = -69.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = 960.0
-offset_top = 455.0
-offset_right = 1010.0
-offset_bottom = 560.0
-texture = ExtResource("2_l3hqt")

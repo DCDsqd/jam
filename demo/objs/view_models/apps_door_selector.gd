@@ -28,7 +28,7 @@ func _ready():
 	var interactor3 : TimeSetInteractor = TimeSetInteractor.new();
 	interactor3.add_alloted_time(1)
 	interactor3.add_alloted_time(2)
-	interactor3.set_is_add_time(true)
+	interactor3.set_is_add_time(false)
 	interactor3.set_interactor(shop_interactor)
 	
 	var cancel : Interaction = Interaction.new()

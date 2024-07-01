@@ -32,11 +32,13 @@
 #include "view_models/caffe_result.h"
 #include "view_models/end_game_model.h"
 #include "view_models/message_model.h"
+#include "view_models/new_day_model.h"
 
 #include "triggers/trigger_next_room.h"
 #include "triggers/trigger_teleport.h"
 #include "triggers/trigger_camera_target.h"
 #include "triggers/trigger_music.h"
+#include "triggers/trigger_new_day.h"
 
 #include "musical_controller/simple_musical_controller.h"
 
@@ -86,6 +88,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<TriggerTeleport>();
 	ClassDB::register_class<TriggerCameraTarget>();
 	ClassDB::register_class<TriggerMusic>();
+	ClassDB::register_class<TriggerNewDay>();
 
 	ClassDB::register_class<MultiSelectorModel>();
 	ClassDB::register_class<JumpMiniGame>();
@@ -93,6 +96,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<CaffeResult>();
 	ClassDB::register_class<EndGameModel>();
 	ClassDB::register_class<MessageModel>();
+	ClassDB::register_class<NewDayModel>();
 
 	ClassDB::register_class<SimpleMusicalController>();
 

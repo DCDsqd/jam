@@ -20,6 +20,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00683594, 0.1026, 0.078125)
 shape = SubResource("BoxShape3D_0ii2a")
 
 [node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CylinderShape3D_810xq")
@@ -31,10 +33,9 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.265015, -0.367572, 0)
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0565034, 0.45389, -0.434758)
 texture_filter = 0
 modulate = Color(0.752941, 0, 0.270588, 1)
-text = "FOR
-SALE"
+text = "Касса"
 font = ExtResource("3_42d5t")
-font_size = 22
+font_size = 25
 outline_size = 0
 line_spacing = -8.47
 

@@ -12,7 +12,7 @@ func _ready():
 	chill_timer.add_alloted_time(0)
 	chill_timer.add_alloted_time(1)
 	chill_timer.add_alloted_time(2)
-	chill_timer.set_is_add_time(true)
+	chill_timer.set_is_add_time(false)
 	
 	var chill_interactor : ViewModelInteractor = ViewModelInteractor.new()
 	chill_interactor.set_sound_key("sound_chill")

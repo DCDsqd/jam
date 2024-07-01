@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2fdk2ie6kfi8"]
+
+[ext_resource type="Theme" uid="uid://d1au4r7q42nnx" path="res://res/styles/main_theme.tres" id="1_b8wxx"]
+
+[node name="NewDayModel" type="NewDayModel"]
+new_day_path = NodePath("Control/ColorRect/Label")
+old_day_path = NodePath("Control/ColorRect/Label2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_b8wxx")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.207843, 0.0745098, 0.211765, 1)
+
+[node name="Label" type="Label" parent="Control/ColorRect"]
+layout_mode = 1
+offset_left = 786.224
+offset_top = 322.0
+offset_right = 1336.22
+offset_bottom = 492.0
+rotation = 1.0472
+theme_override_colors/font_color = Color(0.917647, 0.843137, 0.827451, 1)
+theme_override_font_sizes/font_size = 150
+text = "test"
+
+[node name="Label2" type="Label" parent="Control/ColorRect"]
+layout_mode = 1
+offset_left = 756.224
+offset_top = 166.0
+offset_right = 1306.22
+offset_bottom = 336.0
+theme_override_colors/font_color = Color(0.917647, 0.843137, 0.827451, 1)
+theme_override_font_sizes/font_size = 150
+text = "test"

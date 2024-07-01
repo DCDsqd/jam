@@ -24,7 +24,7 @@ protected:
 	NodePath label_path;
 	NodePath texture_path;
 
-	float timer = 120.0f;
+	float timer = 180.0f;
 
 public:
 	void set_label_path(NodePath p_label_path);

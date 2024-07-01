@@ -81,8 +81,6 @@ bool godot::SleepInteractor::_interact(Entity *p_entity)
 
     if(sound_key != String())
         StaticMethods::play_sound(sound_key);
-
-    StaticMethods::skip_day();
     
     return true;
 }

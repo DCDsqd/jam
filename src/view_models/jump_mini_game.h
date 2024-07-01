@@ -8,6 +8,7 @@
 #include <godot_cpp/classes/hud.hpp>
 #include <godot_cpp/classes/entity.hpp>
 #include <godot_cpp/classes/entity_data.hpp>
+#include <godot_cpp/classes/util.hpp>
 #include <variants/hero_stats.hpp>
 #include <variants/entity_params.hpp>
 
@@ -19,6 +20,9 @@ class JumpMiniGame : public ViewModel {
 private:
     int score = 0;
     int health = 3;
+
+    bool skip_day = false;
+    bool add_time = false;
 
     Entity* player = nullptr;
 
@@ -34,6 +38,9 @@ public:
 	void _open_window(Entity *interaction, Entity *interactor) override;
 	void _close_window() override;
 	void _int_process() override;
+
+    void set_skip_day(bool p_skip_day);
+    void set_add_time(bool p_add_time);
 
     void set_param(String p_param);
     void set_modifier(float p_modifier);
