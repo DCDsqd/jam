@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://byo5i4e6ipydk"]
+[gd_scene load_steps=7 format=3 uid="uid://byo5i4e6ipydk"]
 
 [ext_resource type="Script" path="res://objs/entity/cafe_start_game.gd" id="1_vuon5"]
 [ext_resource type="PackedScene" uid="uid://bb116a03dfxdm" path="res://res/meshs/furniture/stand.gltf" id="2_kint2"]
+[ext_resource type="Script" path="res://objs/entity/indicator.gd" id="3_foijo"]
+[ext_resource type="Texture2D" uid="uid://citd5qskvcam2" path="res://res/sprites/items/indicator.png" id="4_o8myg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ak526"]
 size = Vector3(0.759766, 1.56244, 0.623108)
@@ -17,19 +19,33 @@ script = ExtResource("1_vuon5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00195312, 0.784088, -0.0600281)
 shape = SubResource("BoxShape3D_ak526")
 
+[node name="blockbench_export" parent="." instance=ExtResource("2_kint2")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="blockbench_export"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.08018, 0)
+light_color = Color(1, 0.396078, 0.584314, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 2.0
+omni_range = 3.17645
+
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 8
 collision_mask = 8
+script = ExtResource("3_foijo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CylinderShape3D_ckauf")
 
-[node name="blockbench_export" parent="." instance=ExtResource("2_kint2")]
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(5.6, 0, 0, 0, 5.6, 0, 0, 0, 5.6, 0, 2.53739, 0)
+visible = false
+texture_filter = 0
+texture = ExtResource("4_o8myg")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="blockbench_export"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95076, 0)
-light_color = Color(1, 0.396078, 0.584314, 1)
-light_energy = 2.0
-light_volumetric_fog_energy = 3.0
-omni_range = 2.53543
+[node name="OmniLight3D" type="OmniLight3D" parent="Sprite3D"]
+light_color = Color(0.960784, 0.631373, 0.631373, 1)
+light_energy = 0.5
+light_volumetric_fog_energy = 1.5
+omni_range = 1.22215
+omni_attenuation = 1.8025

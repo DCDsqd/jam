@@ -61,5 +61,6 @@ func add_hair():
 	hair_cutter.check_param_entity("res_money", 500.0)
 	hair_cutter.plus_param_controller("hair_cut", 1)
 	hair_cutter.plus_param_entity("res_money", -500.0)
+	hair_cutter.set_sound_key("sound_hair")
 	hair_cutter.set_add_day(true)
 	add_interactor("Сходить в парихмахерскую", hair_cutter)

@@ -49,6 +49,7 @@ func pay_check():
 	interactor.check_param_entity("res_money", 2000.0)
 	interactor.plus_param_controller("apps_check", 1)
 	interactor.plus_param_entity("res_money", -2000.0)
+	interactor.set_sound_key("sound_pay")
 	add_interactor("Заплатить за квартиру (2000)", interactor)
 	
 

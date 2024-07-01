@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dyafqn7h0fqva"]
+[gd_scene load_steps=14 format=3 uid="uid://dyafqn7h0fqva"]
 
 [ext_resource type="PackedScene" uid="uid://bcmpqyfcok40g" path="res://res/rooms/cafe_room.tscn" id="1_4ef60"]
 [ext_resource type="PackedScene" uid="uid://ch7t0mltj8jjw" path="res://util/activator.tscn" id="1_cuk6y"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://util/sprite_auto_play.gd" id="11_4kw7f"]
 [ext_resource type="PackedScene" uid="uid://byo5i4e6ipydk" path="res://objs/entity/cafe_start_game.tscn" id="11_238be"]
 [ext_resource type="SpriteFrames" uid="uid://cgmlnqf0qmbkh" path="res://res/sprites/entity/npc_2.tres" id="11_va0d3"]
+[ext_resource type="SpriteFrames" uid="uid://bkgi67vqmxmed" path="res://res/sprites/entity/cameo.tres" id="12_5qcam"]
 
 [node name="Cafe" type="SingleHeroScene"]
 hero_key = "hero"
@@ -84,7 +85,7 @@ transform = Transform3D(-0.606218, 0, -0.35, 0, 0.7, 0, 0.35, 0, -0.606218, -2.9
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41665, 0.000363998, -1.99976)
 
 [node name="Custommer2" parent="." instance=ExtResource("5_i022i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07568, 0.000363998, -1.86237)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.859, 0.000363998, -1.86237)
 
 [node name="Custommer3" parent="." instance=ExtResource("5_i022i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21585, 0.000363998, -2.19941)
@@ -108,6 +109,13 @@ transform = Transform3D(-0.681735, 0, 0.347077, 0, 0.765, 0, -0.347077, 0, -0.68
 transform = Transform3D(-2.04521, 0, 1.04123, 0, 2.29501, 0, -1.04123, 0, -2.04521, 0.343359, 0.569279, -2.08259)
 texture_filter = 0
 sprite_frames = ExtResource("10_la4q1")
+speed_scale = 0.25
+script = ExtResource("11_4kw7f")
+
+[node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(-1.19861, 0, 0.610219, 0, 1.345, 0, -0.610219, 0, -1.19861, 2.52294, 0.609577, -1.82522)
+texture_filter = 0
+sprite_frames = ExtResource("12_5qcam")
 speed_scale = 0.25
 script = ExtResource("11_4kw7f")
 
