@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="jam"
-run/main_scene="res://scenes/main_game.tscn"
+run/main_scene="res://scenes/menu/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/bg_color=Color(0.145098, 0.211765, 0.341176, 1)
 boot_splash/image="res://res/sprites/Untitled.png"

@@ -39,6 +39,7 @@
 #include "triggers/trigger_camera_target.h"
 #include "triggers/trigger_music.h"
 #include "triggers/trigger_new_day.h"
+#include "triggers/trigger_sound.h"
 
 #include "musical_controller/simple_musical_controller.h"
 
@@ -89,6 +90,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	ClassDB::register_class<TriggerCameraTarget>();
 	ClassDB::register_class<TriggerMusic>();
 	ClassDB::register_class<TriggerNewDay>();
+	ClassDB::register_class<TriggerSound>();
 
 	ClassDB::register_class<MultiSelectorModel>();
 	ClassDB::register_class<JumpMiniGame>();

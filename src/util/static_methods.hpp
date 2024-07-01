@@ -106,6 +106,7 @@ public:
 
         hud->add_child(model);
         model->open_window(nullptr, nullptr);
+        play_sound("sound_morning");
     }
 
     static void check_end(int cur_day){

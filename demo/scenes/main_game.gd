@@ -14,4 +14,4 @@ func _ready():
 	put_int("item_bar", 0)
 	
 	swap_scene("res://scenes/home.tscn")
-
+	

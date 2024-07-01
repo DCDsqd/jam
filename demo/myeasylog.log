@@ -1973,3 +1973,771 @@
 2024-07-01 04:07:46,555 INFO [default] ModelEntity: end set new entity
 2024-07-01 04:07:50,625 INFO [default] ModelEntity: set new entity
 2024-07-01 04:07:50,625 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:13:34,836 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:13:34,836 INFO [default] SimpleGameController: current room is null
+2024-07-01 04:13:34,925 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:13:34,930 INFO [default] ModelEntity: set new entity
+2024-07-01 04:13:34,930 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:13:34,931 INFO [default] ModelEntity: set new entity
+2024-07-01 04:13:34,931 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:13:34,932 INFO [default] ModelEntity: set new entity
+2024-07-01 04:13:34,932 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:13:34,932 INFO [default] ModelEntity: set new entity
+2024-07-01 04:13:34,932 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:13:34,932 INFO [default] ModelEntity: set new entity
+2024-07-01 04:13:34,932 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:13:34,932 INFO [default] ModelEntity: set new entity
+2024-07-01 04:13:34,932 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:13:34,932 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:13:34,932 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:13:34,932 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:13:34,932 INFO [default] SingleHeroScene: start load entity size: 1
+2024-07-01 04:13:34,932 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:13:34,932 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:13:34,932 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:13:39,454 INFO [default] ModelEntity: set new entity
+2024-07-01 04:13:39,454 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:22:57,237 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:22:57,237 INFO [default] SimpleGameController: current room is null
+2024-07-01 04:22:57,311 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:22:57,317 INFO [default] ModelEntity: set new entity
+2024-07-01 04:22:57,317 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:22:57,317 INFO [default] ModelEntity: set new entity
+2024-07-01 04:22:57,317 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:22:57,319 INFO [default] ModelEntity: set new entity
+2024-07-01 04:22:57,319 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:22:57,319 INFO [default] ModelEntity: set new entity
+2024-07-01 04:22:57,319 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:22:57,319 INFO [default] ModelEntity: set new entity
+2024-07-01 04:22:57,319 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:22:57,319 INFO [default] ModelEntity: set new entity
+2024-07-01 04:22:57,319 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:22:57,319 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:22:57,319 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:22:57,319 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:22:57,319 INFO [default] SingleHeroScene: start load entity size: 1
+2024-07-01 04:22:57,319 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:22:57,319 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:22:57,319 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:23:06,798 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:23:06,798 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:23:06,798 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:23:06,798 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:23:06,798 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:23:06,798 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:23:06,846 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:23:06,850 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,850 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: update entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: start update entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end update entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: input set entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: move set entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: health set entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: end set entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: update entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: start update entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end update entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: input set entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: move set entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: health set entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:23:06,851 INFO [default] MovingEntity: end set entity
+2024-07-01 04:23:06,851 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:06,851 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:23:48,297 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:23:48,297 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:23:48,297 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:23:48,297 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:23:48,297 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:23:48,297 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:23:48,338 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:23:48,341 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,341 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:48,341 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,341 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:48,342 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: update entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: start update entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: end update entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: input set entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: move set entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: health set entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: end set entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:23:48,342 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: set new entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: update entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: start update entity
+2024-07-01 04:23:48,342 INFO [default] ModelEntity: end update entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: input set entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: move set entity
+2024-07-01 04:23:48,342 INFO [default] MovingEntity: health set entity
+2024-07-01 04:23:48,343 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:23:48,343 INFO [default] MovingEntity: end set entity
+2024-07-01 04:23:48,343 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:23:48,343 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:24:33,883 INFO [default] ModelEntity: set new entity
+2024-07-01 04:24:33,884 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,783 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:25:11,783 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:25:11,783 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:25:11,783 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:25:11,783 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:25:11,783 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:25:11,825 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,829 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,829 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:25:11,829 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:25:11,829 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:25:11,829 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:25:11,830 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:25:11,830 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:25:11,830 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:25:11,830 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: update entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: start update entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: end update entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: input set entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: move set entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: health set entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: end set entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,830 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:25:11,830 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:25:11,830 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:25:11,830 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: update entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: start update entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: end update entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: input set entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: move set entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: health set entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:25:11,830 INFO [default] MovingEntity: end set entity
+2024-07-01 04:25:11,830 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:11,830 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:25:56,602 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:25:56,602 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:25:56,602 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:25:56,602 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:25:56,602 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:25:56,602 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:25:56,642 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:25:56,645 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,646 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:56,646 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,646 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:56,646 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:56,647 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: update entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: start update entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: end update entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: input set entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: move set entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: health set entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: end set entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: set new entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: update entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: start update entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: end update entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: input set entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: move set entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: health set entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:25:56,647 INFO [default] MovingEntity: end set entity
+2024-07-01 04:25:56,647 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:25:56,647 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:26:07,047 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:26:07,047 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:26:07,047 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:26:07,047 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:26:07,047 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:26:07,047 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:26:07,081 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:26:07,084 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:07,084 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:07,085 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: update entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: start update entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: end update entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: input set entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: move set entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: health set entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: end set entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: update entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: start update entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: end update entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: input set entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: move set entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: health set entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:26:07,085 INFO [default] MovingEntity: end set entity
+2024-07-01 04:26:07,085 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:07,085 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:26:20,720 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:26:20,720 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:26:20,720 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:26:20,720 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:26:20,721 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:26:20,721 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:26:20,760 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:26:20,763 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,763 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:20,763 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,763 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:20,764 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: update entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: start update entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: end update entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: input set entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: move set entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: health set entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: end set entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: update entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: start update entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: end update entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: input set entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: move set entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: health set entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:26:20,764 INFO [default] MovingEntity: end set entity
+2024-07-01 04:26:20,764 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:26:20,764 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:26:41,428 INFO [default] ModelEntity: set new entity
+2024-07-01 04:26:41,428 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,158 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:27:24,158 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:27:24,158 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:27:24,158 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:27:24,158 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:27:24,158 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:27:24,201 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:27:24,205 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,205 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,206 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] MovingEntity: update entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: start update entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end update entity
+2024-07-01 04:27:24,206 INFO [default] MovingEntity: input set entity
+2024-07-01 04:27:24,206 INFO [default] MovingEntity: move set entity
+2024-07-01 04:27:24,206 INFO [default] MovingEntity: health set entity
+2024-07-01 04:27:24,206 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:27:24,206 INFO [default] MovingEntity: end set entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:27:24,206 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: set new entity
+2024-07-01 04:27:24,206 INFO [default] MovingEntity: update entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: start update entity
+2024-07-01 04:27:24,206 INFO [default] ModelEntity: end update entity
+2024-07-01 04:27:24,206 INFO [default] MovingEntity: input set entity
+2024-07-01 04:27:24,207 INFO [default] MovingEntity: move set entity
+2024-07-01 04:27:24,207 INFO [default] MovingEntity: health set entity
+2024-07-01 04:27:24,207 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:27:24,207 INFO [default] MovingEntity: end set entity
+2024-07-01 04:27:24,207 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:27:24,207 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:28:06,032 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:28:06,032 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:28:06,032 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:28:06,032 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:28:06,032 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:28:06,032 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:28:06,073 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:28:06,076 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,076 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:06,076 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,076 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:06,077 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: update entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: start update entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: end update entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: input set entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: move set entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: health set entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: end set entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: update entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: start update entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: end update entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: input set entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: move set entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: health set entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:28:06,077 INFO [default] MovingEntity: end set entity
+2024-07-01 04:28:06,077 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:06,077 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:28:46,512 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:28:46,512 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:28:46,512 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:28:46,512 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:28:46,512 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:28:46,512 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:28:46,559 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,563 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,564 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: update entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: start update entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: end update entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: input set entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: move set entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: health set entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: end set entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: set new entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: update entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: start update entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: end update entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: input set entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: move set entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: health set entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:28:46,564 INFO [default] MovingEntity: end set entity
+2024-07-01 04:28:46,564 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:28:46,564 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:29:24,512 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:29:24,512 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 04:29:24,512 INFO [default] SingleHeroScene: save entity
+2024-07-01 04:29:24,512 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 04:29:24,512 INFO [default] SingleHeroScene: entity saved
+2024-07-01 04:29:24,512 INFO [default] SimpleGameController: delete current scene
+2024-07-01 04:29:24,552 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:29:24,555 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,555 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,556 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:29:24,556 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:29:24,556 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:29:24,556 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:29:24,556 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 04:29:24,557 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:29:24,557 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:29:24,557 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:29:24,557 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: update entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: start update entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: end update entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: input set entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: move set entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: health set entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: end set entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:29:24,557 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 04:29:24,557 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:29:24,557 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 04:29:24,557 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: start to replace entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: set new entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: update entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: start update entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: end update entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: input set entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: move set entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: health set entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: attack set entity
+2024-07-01 04:29:24,557 INFO [default] MovingEntity: end set entity
+2024-07-01 04:29:24,557 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:29:24,557 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 04:30:22,163 INFO [default] ModelEntity: set new entity
+2024-07-01 04:30:22,163 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:48:05,738 INFO [default] SimpleGameController: start unload room
+2024-07-01 04:48:05,738 INFO [default] SimpleGameController: current room is null
+2024-07-01 04:48:05,813 INFO [default] SimpleGameController: setting scene
+2024-07-01 04:48:05,818 INFO [default] ModelEntity: set new entity
+2024-07-01 04:48:05,818 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:48:05,819 INFO [default] ModelEntity: set new entity
+2024-07-01 04:48:05,819 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:48:05,820 INFO [default] ModelEntity: set new entity
+2024-07-01 04:48:05,820 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:48:05,820 INFO [default] ModelEntity: set new entity
+2024-07-01 04:48:05,820 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:48:05,820 INFO [default] ModelEntity: set new entity
+2024-07-01 04:48:05,820 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:48:05,820 INFO [default] ModelEntity: set new entity
+2024-07-01 04:48:05,820 INFO [default] ModelEntity: end set new entity
+2024-07-01 04:48:05,820 INFO [default] SimpleGameController: scene spawning
+2024-07-01 04:48:05,820 INFO [default] SingleHeroScene: scene init
+2024-07-01 04:48:05,820 INFO [default] SingleHeroScene: start load entity
+2024-07-01 04:48:05,821 INFO [default] SingleHeroScene: start load entity size: 1
+2024-07-01 04:48:05,821 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 04:48:05,821 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 04:48:05,821 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 05:35:49,669 INFO [default] SimpleGameController: start unload room
+2024-07-01 05:35:49,669 INFO [default] SimpleGameController: current room is null
+2024-07-01 05:35:49,738 INFO [default] SimpleGameController: setting scene
+2024-07-01 05:35:49,745 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:49,745 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:49,745 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:49,745 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:49,747 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:49,747 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:49,747 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:49,747 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:49,747 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:49,747 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:49,747 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:49,747 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:49,747 INFO [default] SimpleGameController: scene spawning
+2024-07-01 05:35:49,747 INFO [default] SingleHeroScene: scene init
+2024-07-01 05:35:49,747 INFO [default] SingleHeroScene: start load entity
+2024-07-01 05:35:49,747 INFO [default] SingleHeroScene: start load entity size: 1
+2024-07-01 05:35:49,747 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 05:35:49,747 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 05:35:49,747 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 05:35:57,143 INFO [default] SimpleGameController: start unload room
+2024-07-01 05:35:57,143 INFO [default] SimpleGameController: current room is VoidScene
+2024-07-01 05:35:57,143 INFO [default] SingleHeroScene: save entity
+2024-07-01 05:35:57,143 INFO [default] SingleHeroScene: save entity by key: hero:0000000000000001
+2024-07-01 05:35:57,144 INFO [default] SingleHeroScene: entity saved
+2024-07-01 05:35:57,144 INFO [default] SimpleGameController: delete current scene
+2024-07-01 05:35:57,193 INFO [default] SimpleGameController: setting scene
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,197 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,198 INFO [default] SimpleGameController: scene spawning
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: scene init
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: start load entity
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: start load entity size: 2
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: start to replace entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: update entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: start update entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: end update entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: input set entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: move set entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: health set entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: attack set entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: end set entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: load entity numer: 1
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: load entity by key: hero:0000000000000001
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: entity by key: hero:0000000000000001 cloned
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: start to replace entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: check eternityData selected entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: set new entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: update entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: start update entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: end update entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: input set entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: move set entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: health set entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: attack set entity
+2024-07-01 05:35:57,198 INFO [default] MovingEntity: end set entity
+2024-07-01 05:35:57,198 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:35:57,198 INFO [default] SingleHeroScene: entity loaded
+2024-07-01 05:46:23,543 INFO [default] SimpleGameController: start unload room
+2024-07-01 05:46:23,543 INFO [default] SimpleGameController: current room is null
+2024-07-01 05:46:23,607 INFO [default] SimpleGameController: setting scene
+2024-07-01 05:46:23,612 INFO [default] ModelEntity: set new entity
+2024-07-01 05:46:23,612 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:46:23,613 INFO [default] ModelEntity: set new entity
+2024-07-01 05:46:23,613 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:46:23,614 INFO [default] ModelEntity: set new entity
+2024-07-01 05:46:23,614 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:46:23,614 INFO [default] ModelEntity: set new entity
+2024-07-01 05:46:23,614 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:46:23,614 INFO [default] ModelEntity: set new entity
+2024-07-01 05:46:23,614 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:46:23,614 INFO [default] ModelEntity: set new entity
+2024-07-01 05:46:23,614 INFO [default] ModelEntity: end set new entity
+2024-07-01 05:46:23,614 INFO [default] SimpleGameController: scene spawning
+2024-07-01 05:46:23,614 INFO [default] SingleHeroScene: scene init
+2024-07-01 05:46:23,614 INFO [default] SingleHeroScene: start load entity
+2024-07-01 05:46:23,614 INFO [default] SingleHeroScene: start load entity size: 1
+2024-07-01 05:46:23,614 INFO [default] SingleHeroScene: load entity numer: 0
+2024-07-01 05:46:23,614 INFO [default] SingleHeroScene: load entity name: 0000000000000001
+2024-07-01 05:46:23,614 INFO [default] SingleHeroScene: entity loaded

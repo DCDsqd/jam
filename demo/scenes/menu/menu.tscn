@@ -1,0 +1,693 @@
+[gd_scene load_steps=20 format=3 uid="uid://bmyas4scg4wgi"]
+
+[ext_resource type="Script" path="res://scenes/menu/camera_move.gd" id="1_aqveb"]
+[ext_resource type="PackedScene" uid="uid://ccebw5qs4w7ja" path="res://objs/tiles/brick_cafe.tscn" id="2_b86mr"]
+[ext_resource type="Texture2D" uid="uid://vdt4fwmq3gol" path="res://res/sprites/furniture/window.png" id="3_7bsx6"]
+[ext_resource type="AudioStream" uid="uid://cefhqjwyg6c6c" path="res://res/sound/music/sobor-theme.wav" id="4_255qm"]
+[ext_resource type="Texture2D" uid="uid://cc1jdf6h2xqbw" path="res://res/sprites/Logo.png" id="4_nvqm0"]
+[ext_resource type="FontFile" uid="uid://coicw3m5x74rq" path="res://res/styles/main_font.ttf" id="5_rps0u"]
+[ext_resource type="Texture2D" uid="uid://bhx62rhd12mpl" path="res://res/sprites/items/bubbles3.png" id="6_f1v35"]
+[ext_resource type="Script" path="res://scenes/menu/loud_control.gd" id="6_xport"]
+[ext_resource type="Script" path="res://scenes/menu/StartGame.gd" id="7_3p10j"]
+[ext_resource type="Texture2D" uid="uid://sraa7btqstin" path="res://res/sprites/items/bubbles2.png" id="7_evhsq"]
+[ext_resource type="Script" path="res://scenes/menu/exit_game.gd" id="8_581x2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_agtj4"]
+sky_top_color = Color(0.690196, 0.164706, 0.713726, 1)
+sky_horizon_color = Color(0.847059, 0.592157, 0.380392, 1)
+
+[sub_resource type="Sky" id="Sky_mccvf"]
+sky_material = SubResource("ProceduralSkyMaterial_agtj4")
+
+[sub_resource type="Environment" id="Environment_6br8q"]
+background_mode = 2
+background_energy_multiplier = 0.1
+sky = SubResource("Sky_mccvf")
+tonemap_mode = 2
+tonemap_exposure = 0.8
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.07
+volumetric_fog_albedo = Color(0.929412, 0.713726, 0.788235, 1)
+volumetric_fog_emission_energy = 59.79
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3lrm7"]
+texture = ExtResource("6_f1v35")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akowg"]
+bg_color = Color(0.917647, 0.843137, 0.827451, 1)
+expand_margin_top = 40.0
+expand_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pp80g"]
+bg_color = Color(0.145098, 0.211765, 0.341176, 1)
+expand_margin_top = 40.0
+expand_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xp0wy"]
+texture = ExtResource("7_evhsq")
+
+[sub_resource type="Theme" id="Theme_oxp2n"]
+Button/colors/font_color = Color(0.145098, 0.211765, 0.341176, 1)
+Button/colors/font_hover_color = Color(0.65098, 0.603922, 0.792157, 1)
+Button/font_sizes/font_size = 53
+Button/fonts/font = ExtResource("5_rps0u")
+Button/styles/disabled = SubResource("StyleBoxTexture_3lrm7")
+Button/styles/focus = SubResource("StyleBoxTexture_3lrm7")
+Button/styles/hover = SubResource("StyleBoxTexture_3lrm7")
+Button/styles/normal = SubResource("StyleBoxTexture_3lrm7")
+Button/styles/pressed = SubResource("StyleBoxTexture_3lrm7")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_akowg")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_akowg")
+HSlider/styles/slider = SubResource("StyleBoxFlat_pp80g")
+Label/colors/font_color = Color(0.145098, 0.211765, 0.341176, 1)
+Label/font_sizes/font_size = 82
+Label/fonts/font = ExtResource("5_rps0u")
+Label/styles/normal = SubResource("StyleBoxTexture_xp0wy")
+
+[node name="Menu" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.967973, -0.251056, 0, 0.251056, 0.967973, 1, -1.06906, 0.425)
+script = ExtResource("1_aqveb")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="BrickCafe" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe2" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe3" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe4" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe5" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe6" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe7" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe8" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe17" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe18" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe19" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe20" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe21" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe22" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe23" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe24" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe9" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe10" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe11" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe12" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe13" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe14" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe25" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe26" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe27" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe36" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe37" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe38" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe39" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe40" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe28" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe29" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe30" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe15" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe16" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe31" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe32" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe41" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 6, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe42" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe43" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 6, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe44" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe45" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe46" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 6, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe47" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 6, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe48" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 6, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe33" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe34" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe35" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe49" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe50" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe51" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe52" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe53" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -4, -3)
+skeleton = NodePath("../..")
+
+[node name="BrickCafe54" parent="Node" instance=ExtResource("2_b86mr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3, 0, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D2" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1, 0, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D2"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_color = Color(0.501961, 0.835294, 0.933333, 1)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D3" type="Sprite3D" parent="Node"]
+transform = Transform3D(3.15, 0, 0, 0, 3.15, 0, 0, 0, 3.15, 1.02318, 0.0168396, -2.99505)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_nvqm0")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D3"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_color = Color(0.890196, 0.670588, 0.862745, 1)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D4" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3, 0, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D4"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_color = Color(0.94902, 0.745098, 0.298039, 1)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D5" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5, 0, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D5"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D6" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5, 2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D6"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D7" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3, 2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D7"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D8" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1, 2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D8"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D9" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1, 2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D9"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_color = Color(0.898039, 0.8, 0.537255, 1)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D10" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3, 2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D10"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_color = Color(0.698039, 0.878431, 0.572549, 1)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D11" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5, 2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D11"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D12" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5, 0, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D12"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D13" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5, -2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D13"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D14" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3, -2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D14"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D15" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1, -2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D15"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D16" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1, -2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D16"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D17" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3, -2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D17"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D18" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5, -2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D18"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D19" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5, 4, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D19"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D25" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7, 0, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D25"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D26" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7, 2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D26"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D27" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7, -2, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D27"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D28" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7, 4, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D28"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D20" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3, 4, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D20"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D21" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1, 4, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D21"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_color = Color(0.956863, 0.607843, 0.862745, 1)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D22" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1, 4, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D22"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D23" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3, 4, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D23"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407805, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="Sprite3D24" type="Sprite3D" parent="Node"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5, 4, -2.90935)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_7bsx6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/Sprite3D24"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, -0.0407804, 0.112376)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.65532
+omni_attenuation = 1.36604
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6br8q")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.5, 0.433013, -0.75, 0, 0.866025, 0.5, 0.866025, -0.25, 0.433013, 0, 4, 0)
+shadow_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_255qm")
+autoplay = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 702.0
+offset_top = 737.0
+offset_right = 1240.0
+offset_bottom = 965.0
+theme = SubResource("Theme_oxp2n")
+text = "Звук"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Control"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 898.0
+offset_right = 1185.0
+offset_bottom = 974.0
+theme = SubResource("Theme_oxp2n")
+value = 48.0
+script = ExtResource("6_xport")
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 832.0
+offset_right = 565.0
+offset_bottom = 983.0
+theme = SubResource("Theme_oxp2n")
+text = "Начать игру"
+script = ExtResource("7_3p10j")
+
+[node name="Button2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1360.0
+offset_top = 832.0
+offset_right = 1755.0
+offset_bottom = 978.0
+theme = SubResource("Theme_oxp2n")
+text = "Выйти"
+script = ExtResource("8_581x2")
